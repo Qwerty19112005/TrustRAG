@@ -1,0 +1,30 @@
+# TrustRAG dependencies
+#
+# NOTE ON TORCH: do not install torch from this file on a machine with an NVIDIA
+# GPU. The default PyPI wheel is CPU-only. Install the CUDA build first:
+#     pip install torch --index-url https://download.pytorch.org/whl/cu126
+# then run:  pip install -r requirements.txt
+# On Colab, torch is already present with CUDA and should be left alone.
+
+# --- core, needed from step 1
+transformers>=4.44
+tokenizers
+pyarrow>=15
+numpy
+pandas
+scikit-learn          # logistic regression, isotonic calibration, all metrics
+
+# --- data loading (parquet files already sit in ./data, so this is optional)
+datasets>=2.19
+
+# --- sentence splitting and entity counts (features 5 and 6)
+spacy>=3.7
+# after installing, also run:  python -m spacy download en_core_web_sm
+
+# --- plots for the results
+matplotlib
+
+# --- phase 4 only: the live retrieval demo. Skip until the detector works.
+sentence-transformers
+faiss-cpu
+gradio

@@ -1,0 +1,50 @@
+# ---------------------------------------------------------------- datasets
+# ~108 MB of parquet. Rebuilt in about a minute with:
+#     python scripts/download_data.py
+/data/*
+!/data/README.md
+
+# derived feature matrices and claim caches
+*.npz
+
+# ---------------------------------------------------------------- python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+/build/
+/dist/
+.venv/
+venv/
+env/
+.python-version
+
+# ---------------------------------------------------------------- notebooks
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------- models
+# transformers / huggingface downloads, if anyone points the cache here
+.cache/
+models/
+*.safetensors
+*.bin
+
+# ---------------------------------------------------------------- results
+# keep the folder and any committed tables, drop bulky run output
+/results/*
+!/results/.gitkeep
+!/results/*.md
+!/results/*.csv
+
+# ---------------------------------------------------------------- office
+# Word and PowerPoint lock files, created while a document is open
+~$*
+*.tmp
+
+# ---------------------------------------------------------------- editors / os
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
