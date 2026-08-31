@@ -24,8 +24,8 @@ Nothing is fine-tuned. The verifier is used off the shelf.
 
 | | |
 |---|---|
-| Adhithyan V | 230121003 |
-| Aditya Raj | 230121004 |
+| Adhithyan V |
+| Aditya Raj |
 
 Course project for **NLP with LLMs**. B.Tech, group of 2.
 
