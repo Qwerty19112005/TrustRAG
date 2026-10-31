@@ -136,10 +136,8 @@ We tidied the code into folders after submitting the report and contribution sta
 | `scripts/download_data.py` | `scripts/setup/download_data.py` |
 
 ## Problems you might hit
-
-- **Everything runs on CPU even though you have a GPU.** You probably got the CPU build of torch. Install it with the command under Setup. `check_env.py` tells you which GPU it sees.
-- **"The paging file is too small" on Windows.** This happened to us while starting the demo with a lot of other apps open. It means Windows ran out of virtual memory while loading a model. Close some programs and try again.
-- **CUDA out of memory.** The demo holds the generator and the verifier at once, about 5.2 GB. The experiments alone peak around 2.6 GB. Close anything else using the GPU.
+- **"The paging file is too small" on Windows.** This happened to us while starting the demo with a lot of other apps open. Windows ran out of virtual memory while loading a model. Close some programs and try again.
+- **CUDA out of memory.** The demo holds the generator and the verifier at once, about 5.2 GB.
 
 ## Data and models
 
