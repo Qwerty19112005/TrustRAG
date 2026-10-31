@@ -1,0 +1,32 @@
+{
+  "window": 512,
+  "passage_tokens_median": 516.5,
+  "passage_tokens_p90": 1245.3999999999999,
+  "share_passages_truncated": 0.5066666666666667,
+  "groups": [
+    {
+      "group": "fits",
+      "claims": 1845,
+      "unsupported": 100,
+      "passages": 74,
+      "auroc": {
+        "NLI, whole passage": 0.8498939828080229,
+        "NLI, best sentence": 0.7579942693409742,
+        "TrustRAG v2 (12 features)": 0.7945214899713466,
+        "TrustRAG v2, boosted trees": 0.8296790830945558
+      }
+    },
+    {
+      "group": "truncated",
+      "claims": 2963,
+      "unsupported": 158,
+      "passages": 76,
+      "auroc": {
+        "NLI, whole passage": 0.7606940589814752,
+        "NLI, best sentence": 0.7278751776890272,
+        "TrustRAG v2 (12 features)": 0.7909677564927006,
+        "TrustRAG v2, boosted trees": 0.8075746293914574
+      }
+    }
+  ]
+}

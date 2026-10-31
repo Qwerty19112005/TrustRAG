@@ -1,17 +1,22 @@
-# ---------------------------------------------------------------- datasets
-# ~108 MB of parquet. Rebuilt in about a minute with:
-#     python scripts/download_data.py
+# datasets and caches, scripts/setup/download_data.py gets them back
 /data/*
 !/data/README.md
-
-# derived feature matrices and claim caches
 *.npz
 
-# ---------------------------------------------------------------- python
+# video, report and slides are submitted separately
+/Video/
+/docs/
+
+# run output we don't keep
+/results/smoke/
+/results/label_check/page_export/
+/results/**/*.log
+/results/demo/*_smoke.json
+
+# python
 __pycache__/
 *.py[cod]
 *.egg-info/
-.eggs/
 /build/
 /dist/
 .venv/
@@ -19,29 +24,18 @@ venv/
 env/
 .python-version
 
-# ---------------------------------------------------------------- notebooks
+# notebooks
 .ipynb_checkpoints/
 
-# ---------------------------------------------------------------- models
-# transformers / huggingface downloads, if anyone points the cache here
+# models
 .cache/
 models/
 *.safetensors
 *.bin
 
-# ---------------------------------------------------------------- results
-# keep the folder and any committed tables, drop bulky run output
-/results/*
-!/results/.gitkeep
-!/results/*.md
-!/results/*.csv
-
-# ---------------------------------------------------------------- office
-# Word and PowerPoint lock files, created while a document is open
-~$*
 *.tmp
 
-# ---------------------------------------------------------------- editors / os
+# editors and os
 .vscode/
 .idea/
 *.swp

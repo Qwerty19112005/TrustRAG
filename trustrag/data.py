@@ -1,4 +1,4 @@
-"""Load RAGTruth and turn its character-level spans into claim-level labels."""
+"""Load RAGTruth and turn its annotated spans into sentence labels."""
 
 import hashlib
 import json
@@ -13,7 +13,7 @@ DATA = os.path.join(ROOT, "data", "ragtruth")
 CACHE = os.path.join(ROOT, "data", "cache")
 
 SEED = 42
-MIN_OVERLAP_CHARS = 3     # guards against off-by-one annotation noise
+MIN_OVERLAP_CHARS = 3
 _NLP = None
 
 
@@ -27,8 +27,7 @@ def _nlp():
 
 
 def _source_id(context):
-    # Six models answer each source passage. Splitting by response would put the
-    # same evidence on both sides, so we group on the passage instead.
+    # six models answer each passage, so we split on the passage
     return hashlib.md5((context or "").encode("utf-8")).hexdigest()[:16]
 
 
@@ -43,7 +42,7 @@ def _parse_spans(raw):
 
 
 def load_claims(split="train", task_type=None, limit=None, use_cache=True):
-    """One row per claim. Returns a DataFrame."""
+    """One row per sentence."""
     tag = "%s_%s" % (split, task_type or "all")
     cache_path = os.path.join(CACHE, "claims_%s.parquet" % tag)
     if use_cache and limit is None and os.path.exists(cache_path):
@@ -53,7 +52,6 @@ def load_claims(split="train", task_type=None, limit=None, use_cache=True):
     t = pq.ParquetFile(src).read().to_pydict()
     n = len(t["id"])
 
-    # the parquet is sorted by task_type, so an unshuffled head() is one task only
     order = list(range(n))
     random.Random(SEED).shuffle(order)
     if task_type:
@@ -81,7 +79,7 @@ def load_claims(split="train", task_type=None, limit=None, use_cache=True):
             length = b - a
             if length <= 0:
                 continue
-            # any overlap counts: one fabricated clause makes the whole claim unfaithful
+            # one made-up clause makes the whole sentence unsupported
             hit = sum(flag[a:b])
             label = int(hit >= MIN_OVERLAP_CHARS)
             kinds = sorted({lt for (sa, sb), lt in types.items()
@@ -96,7 +94,7 @@ def load_claims(split="train", task_type=None, limit=None, use_cache=True):
                 "context": t["context"][i],
                 "query": t["query"][i],
                 "label": label,
-                "overlap_frac": hit / length,   # for the threshold ablation
+                "overlap_frac": hit / length,
                 "label_types": "|".join(kinds),
             })
 
@@ -108,7 +106,7 @@ def load_claims(split="train", task_type=None, limit=None, use_cache=True):
 
 
 def make_splits(df, val_frac=0.15, seed=SEED):
-    """Split by source passage so evidence cannot leak, stratified on positives."""
+    """Split by source passage so no evidence leaks between splits."""
     per_source = (df.groupby("source_id")["label"]
                     .mean().gt(0).astype(int).rename("has_pos").reset_index())
     rng = pd.Series(range(len(per_source))).sample(frac=1, random_state=seed).values
@@ -130,23 +128,3 @@ def describe(df, name="dataset"):
     print("%-22s %7s claims  %6s positive (%.1f%%)  ratio 1:%.1f  %s sources"
           % (name, format(n, ","), format(pos, ","), 100 * pos / n,
              (n - pos) / max(pos, 1), format(df["source_id"].nunique(), ",")))
-
-
-if __name__ == "__main__":
-    import time
-    t0 = time.time()
-    df = load_claims()
-    print("built in %.1fs" % (time.time() - t0))
-    describe(df, "RAGTruth train (all)")
-    print("\ntask mix:", df["task_type"].value_counts().to_dict())
-    print("positive rate by task:")
-    for task, g in df.groupby("task_type"):
-        print("   %-10s %.1f%%" % (task, 100 * g["label"].mean()))
-
-    train, val = make_splits(df)
-    print()
-    describe(train, "train split")
-    describe(val, "val split")
-    leak = set(train["source_id"]) & set(val["source_id"])
-    print("\nsource overlap between splits: %d  %s"
-          % (len(leak), "(none, no leakage)" if not leak else "<-- LEAK"))

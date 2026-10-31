@@ -1,0 +1,3827 @@
+{
+ "generator": "Qwen2.5-1.5B-Instruct",
+ "retriever": "bge-small-en-v1.5, top 3",
+ "corpus_paragraphs": 66581,
+ "questions": 100,
+ "claims": 161,
+ "claims_per_answer": 1.61,
+ "t_flag": 0.15384615384615385,
+ "t_hold": 0.5,
+ "actions": {
+  "show": 0.9503105590062112,
+  "flag": 0.049689440993788817,
+  "hold": 0.0
+ },
+ "retrieval": {
+  "both_gold": 0.43,
+  "any_gold": 0.95
+ },
+ "outcomes": {
+  "correct": 0.36,
+  "wrong": 0.32,
+  "refused": 0.32
+ },
+ "by_outcome": {
+  "correct": {
+   "answers": 36,
+   "mean_max_risk": 0.07101815755962824,
+   "any_flag": 0.1111111111111111
+  },
+  "wrong": {
+   "answers": 32,
+   "mean_max_risk": 0.05749927965899039,
+   "any_flag": 0.03125
+  },
+  "refused": {
+   "answers": 32,
+   "mean_max_risk": 0.0765422732698367,
+   "any_flag": 0.09375
+  }
+ },
+ "by_retrieval": {
+  "both_gold": {
+   "answers": 43,
+   "mean_max_risk": 0.06333022325161987,
+   "any_flag": 0.06976744186046512
+  },
+  "missing_gold": {
+   "answers": 57,
+   "mean_max_risk": 0.07232953975525314,
+   "any_flag": 0.08771929824561403
+  }
+ },
+ "outcome_by_gold_retrieved": {
+  "0": {
+   "correct": 0,
+   "wrong": 3,
+   "refused": 2
+  },
+  "1": {
+   "correct": 8,
+   "wrong": 20,
+   "refused": 24
+  },
+  "2": {
+   "correct": 28,
+   "wrong": 9,
+   "refused": 6
+  }
+ },
+ "auroc_wrong_vs_correct": 0.4661458333333333,
+ "latency_ms": {
+  "retrieve": 3.16389799118042,
+  "generate": 2702.304482460022,
+  "check": 270.6691026687622
+ },
+ "records": [
+  {
+   "id": "5a7613c15542994ccc9186bf",
+   "question": "VIVA Media AG changed it's name in 2004. What does their new acronym stand for?",
+   "gold": "Gesellschaft mit beschränkter Haftung",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Gesellschaft mit beschränkter Haftung",
+    "VIVA Media"
+   ],
+   "retrieved": [
+    "VIVA Media",
+    "Viva (UK and Ireland)",
+    "ABS-CBN Digital Media"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on passage 1, VIVA Media AG changed its name to VIVA Media GmbH in 2004. Their new acronym stands for VIVA Media GmbH.",
+   "claims": [
+    {
+     "claim": "Based on passage 1, VIVA Media AG changed its name to VIVA Media GmbH in 2004.",
+     "raw": 0.22872490493900757,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.0022211181931197643,
+     "novel_words": 0.5,
+     "evidence": "VIVA Media: VIVA Media GmbH (until 2004 \"VIVA Media AG\") is a music television network originating from Germany."
+    },
+    {
+     "claim": "Their new acronym stands for VIVA Media GmbH.",
+     "raw": 0.052859786969119464,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.991324782371521,
+     "novel_words": 0.4285714328289032,
+     "evidence": "VIVA Media: VIVA Media GmbH (until 2004 \"VIVA Media AG\") is a music television network originating from Germany."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 3609.5058917999268,
+   "check_ms": 4575.346946716309
+  },
+  {
+   "id": "5adf2fa35542993344016c11",
+   "question": "Which of Jonny Craig and Pete Doherty has been a member of more bands ?",
+   "gold": "Jonny\" Craig",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Jonny Craig",
+    "Pete Doherty"
+   ],
+   "retrieved": [
+    "Pete Doherty",
+    "Jonny Craig",
+    "Oasis (band)"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Jonny Craig has been a member of more bands than Pete Doherty. Jonny Craig has been associated with several bands including Dance Gavin Dance, Emarosa, Ghost Runner on Third, Slaves, and westerHALTS. In contrast, Pete Doherty has only been associated with the Libertines, which he co-founded with Carl Barât. Therefore, Jonny Craig has been a member of more bands compared to Pete Doherty.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Jonny Craig has been a member of more bands than Pete Doherty.",
+     "raw": 0.27405540196378186,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.017589494585990906,
+     "novel_words": 0.3636363744735718,
+     "evidence": "Oasis (band): Oasis were an English rock band formed in Manchester in 1991."
+    },
+    {
+     "claim": "Jonny Craig has been associated with several bands including Dance Gavin Dance, Emarosa, Ghost Runner on Third, Slaves, and westerHALTS.",
+     "raw": 0.14390899341305502,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.5949524641036987,
+     "novel_words": 0.2142857164144516,
+     "evidence": "He has been the lead vocalist for the bands Dance Gavin Dance, Emarosa, Ghost Runner on Third, Slaves, and westerHALTS."
+    },
+    {
+     "claim": "In contrast, Pete Doherty has only been associated with the Libertines, which he co-founded with Carl Barât.",
+     "raw": 0.3133399025891381,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.020073816180229187,
+     "novel_words": 0.3333333432674408,
+     "evidence": "He is best known for being co-frontman of the Libertines, which he formed with Carl Barât in 1997."
+    },
+    {
+     "claim": "Therefore, Jonny Craig has been a member of more bands compared to Pete Doherty.",
+     "raw": 0.32935988400383087,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0006674861651845276,
+     "novel_words": 0.3333333432674408,
+     "evidence": "As a solo artist, he has released one studio album, two EPs and a live album to date."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 7776.378393173218,
+   "check_ms": 527.3027420043945
+  },
+  {
+   "id": "5adfdef9554299025d62a36b",
+   "question": "Where was the first governor after the The Missouri Compromise from?",
+   "gold": "Bath, Maine",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Maine gubernatorial election, 1820",
+    "William King (governor)"
+   ],
+   "retrieved": [
+    "Missouri Compromise",
+    "Maine gubernatorial election, 1820",
+    "Jay Nixon"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the given passages, the first governor after the Missouri Compromise was William King, who was elected as the Governor of Maine on April 3, 1820, shortly after Maine became a separate state due to the Missouri Compromise.",
+   "claims": [
+    {
+     "claim": "Based on the given passages, the first governor after the Missouri Compromise was William King, who was elected as the Governor of Maine on April 3, 1820, shortly after Maine became a separate state due to the Missouri Compromise.",
+     "raw": 0.12908095071504605,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.7541727423667908,
+     "novel_words": 0.3499999940395355,
+     "evidence": "This election saw the virtually unanimous election of William King, the man most chiefly responsible for the push for Maine statehood."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 4092.0042991638184,
+   "check_ms": 241.69206619262695
+  },
+  {
+   "id": "5a7180205542994082a3e856",
+   "question": "The creator of \"Wallace and Gromit\" also created what animation comedy that matched animated zoo animals with a soundtrack of people talking about their homes? ",
+   "gold": "Creature Comforts",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Creature Comforts",
+    "Nick Park"
+   ],
+   "retrieved": [
+    "Wallace and Gromit",
+    "Wallace &amp; Gromit in Project Zoo",
+    "Nick Park"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the creator of \"Wallace and Gromit\" also created the animation comedy \"Wallace & Gromit in Project Zoo,\" which matches animated zoo animals with a soundtrack of people talking about their homes.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the creator of \"Wallace and Gromit\" also created the animation comedy \"Wallace & Gromit in Project Zoo,\" which matches animated zoo animals with a soundtrack of people talking about their homes.",
+     "raw": 0.5044287333055256,
+     "p": 0.1,
+     "action": "show",
+     "support": 0.02055932767689228,
+     "novel_words": 0.6190476417541504,
+     "evidence": "Nick Park: Nicholas Wulstan \"Nick\" Park, CBE (born 6 December 1958) is an English director, writer and animator best known as the creator of \"Wallace and Gromit\" and \"Shaun the Sheep\"."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 3900.5656242370605,
+   "check_ms": 248.37708473205566
+  },
+  {
+   "id": "5a78bc6b554299148911f979",
+   "question": "Woman's Era and Naj are what kind of magazines?",
+   "gold": "fortnightly women interest magazine",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Naj",
+    "Woman's Era"
+   ],
+   "retrieved": [
+    "Woman's Era",
+    "Naj",
+    "Woman's Day"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Woman's Era is a fortnightly women's interest magazine published in English in India, while Naj is a Polish language fortnightly lifestyle and women's magazine published in Warsaw, Poland. Woman's Day is an American women's magazine covering various topics including homemaking, food, nutrition, physical fitness, physical attractiveness, and fashion.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Woman's Era is a fortnightly women's interest magazine published in English in India, while Naj is a Polish language fortnightly lifestyle and women's magazine published in Warsaw, Poland.",
+     "raw": 0.2319955753048284,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.05816066265106201,
+     "novel_words": 0.20000000298023224,
+     "evidence": "Woman's Era: Woman's Era is a fortnightly women interest magazine published in English in India."
+    },
+    {
+     "claim": "Woman's Day is an American women's magazine covering various topics including homemaking, food, nutrition, physical fitness, physical attractiveness, and fashion.",
+     "raw": 0.10669842519634855,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9929675459861755,
+     "novel_words": 0.1764705926179886,
+     "evidence": "Woman's Day: Woman's Day is an American women's magazine that covers such topics as homemaking, food, nutrition, physical fitness, physical attractiveness, and fashion."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 5659.878492355347,
+   "check_ms": 219.75445747375488
+  },
+  {
+   "id": "5abdd0f15542991f6610604d",
+   "question": "The Rome Protocols were signed by three Prime Ministers one of which was assassinated as part of what?",
+   "gold": "a failed coup attempt",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Engelbert Dollfuss",
+    "Rome Protocols"
+   ],
+   "retrieved": [
+    "Rome Protocols",
+    "Neville Chamberlain",
+    "Benito Mussolini"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.30388458208735486,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": -0.00414355518296361,
+     "novel_words": 1.0,
+     "evidence": "Neville Chamberlain: Arthur Neville Chamberlain, ( ; 18 March 1869 – 9 November 1940) was a British Conservative politician who served as Prime Minister of the United Kingdom from May 1937 to May 1940."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 840.5449390411377,
+   "check_ms": 228.1191349029541
+  },
+  {
+   "id": "5a8e27d45542995a26add46a",
+   "question": "Jaclyn Stapp is married to the former frontman of a band that disbanded in what year?",
+   "gold": "2004",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Creed (band)",
+    "Jaclyn Stapp"
+   ],
+   "retrieved": [
+    "Jaclyn Stapp",
+    "Creed (band)",
+    "Stza"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2941935497235073,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0011024917475879192,
+     "novel_words": 1.0,
+     "evidence": "The band's third album, \"Weathered\", was released in 2001 with Tremonti handling bass before the band disbanded in 2004 due to increasing tension between members."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 819.5464611053467,
+   "check_ms": 251.39665603637695
+  },
+  {
+   "id": "5a881d2355429938390d3eeb",
+   "question": " If You Ever Get Lonely was covered by what Lyric Street Records-affiliated band?",
+   "gold": "Love and Theft",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "If You Ever Get Lonely",
+    "Love and Theft (duo)"
+   ],
+   "retrieved": [
+    "If You Ever Get Lonely",
+    "Evanescence",
+    "Guns N' Roses"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2942435067316262,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.00040985457599163055,
+     "novel_words": 1.0,
+     "evidence": "Guns N' Roses have released six studio albums, accumulating sales of more than 100 million records worldwide, including 45 million records in the United States, making them one of the world's best-selling artists of all time."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 745.7337379455566,
+   "check_ms": 266.07251167297363
+  },
+  {
+   "id": "5ae4a1ef55429970de88d9e7",
+   "question": "When was the  Argentine former footballer which  Dutch manager Ronald Koeman replaced in  2014–15 Southampton F.C. season born",
+   "gold": "2 March 1972",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "2014–15 Southampton F.C. season",
+    "Mauricio Pochettino"
+   ],
+   "retrieved": [
+    "2014–15 Southampton F.C. season",
+    "Ronald Koeman",
+    "2016–17 Southampton F.C. season"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.29837593574134846,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.001317621674388647,
+     "novel_words": 1.0,
+     "evidence": "They were knocked out of the UEFA Europa League at the group stage, having won two, drawn two and lost two of their matches, and the FA Cup in the fourth round, while they finished as runners-up in the EFL Cup Final losing 3–2 to Manchester United."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 840.4402732849121,
+   "check_ms": 286.1912250518799
+  },
+  {
+   "id": "5ae6f2a7554299572ea5464a",
+   "question": "Which character does this protagonist, who secretly loves and marries a member of the rival house, of William Shakespeare's tragedy that has a fictional character Benvolio slay?",
+   "gold": "Tybalt",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Benvolio",
+    "Romeo"
+   ],
+   "retrieved": [
+    "Romeo",
+    "Benvolio",
+    "Juliet"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, the character who fits the description is Romeo. He is the protagonist of William Shakespeare's tragedy \"Romeo and Juliet,\" and he secretly loves and marries Juliet from the rival House of Capulet.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the character who fits the description is Romeo.",
+     "raw": 0.1247752040543305,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.9068129658699036,
+     "novel_words": 0.7142857313156128,
+     "evidence": "Forced into exile after slaying Juliet's cousin, Tybalt, in a duel, Romeo commits suicide upon hearing falsely of Juliet's death."
+    },
+    {
+     "claim": "He is the protagonist of William Shakespeare's tragedy \"Romeo and Juliet,\" and he secretly loves and marries Juliet from the rival House of Capulet.",
+     "raw": 0.1502178019011409,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.05173172056674957,
+     "novel_words": 0.0,
+     "evidence": "Benvolio: Benvolio is a fictional character in Shakespeare's drama \"Romeo and Juliet\"."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 4002.9549598693848,
+   "check_ms": 239.9287223815918
+  },
+  {
+   "id": "5a845d735542996488c2e52e",
+   "question": "Stronger Together was used for the campaign comprised of the Vice Presidential candidate who was a Senator from what state?",
+   "gold": "Virginia",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Stronger Together (book)",
+    "Tim Kaine"
+   ],
+   "retrieved": [
+    "Stronger Together (book)",
+    "Chuck Schumer",
+    "Hillary Clinton"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, Stronger Together was used for the campaign comprised of the Vice Presidential candidate who was a Senator from New York. This can be inferred from passage 3 which states that Hillary Clinton was the Democratic Party's nominee for President of the United States in the 2016 election.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Stronger Together was used for the campaign comprised of the Vice Presidential candidate who was a Senator from New York.",
+     "raw": 0.36950012689150696,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0051366956904530525,
+     "novel_words": 0.5,
+     "evidence": "Chuck Schumer: Charles Ellis Schumer ( ; born November 23, 1950) is an American politician, the senior United States senator from New York and a member of the Democratic Party."
+    },
+    {
+     "claim": "This can be inferred from passage 3 which states that Hillary Clinton was the Democratic Party's nominee for President of the United States in the 2016 election.",
+     "raw": 0.2758634474471802,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.10349220037460327,
+     "novel_words": 0.2666666805744171,
+     "evidence": "Stronger Together (book): Stronger Together: A Blueprint for America's Future is a 2016 book by Hillary Clinton and her vice-presidential running mate Tim Kaine, released during the 2016 U.S. presidential election."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 4791.543483734131,
+   "check_ms": 268.0237293243408
+  },
+  {
+   "id": "5adf5daf5542995534e8c79d",
+   "question": "Are Darren Benjamin Shepherd and Rémi Lange both American?",
+   "gold": "no",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Darren Benjamin Shepherd",
+    "Rémi Lange"
+   ],
+   "retrieved": [
+    "Darren Benjamin Shepherd",
+    "Rémi Lange",
+    "Jessica Lange"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Darren Benjamin Shepherd is American, while Rémi Lange is French. Therefore, the answer to the question \"Are Darren Benjamin Shepherd and Rémi Lange both American?\" is no.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Darren Benjamin Shepherd is American, while Rémi Lange is French.",
+     "raw": 0.04440657765436071,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.8831718564033508,
+     "novel_words": 0.3333333432674408,
+     "evidence": "Rémi Lange: Rémi Lange (born 4 February 1969 in Gennevilliers, Hauts-de-Seine) is a French film director."
+    },
+    {
+     "claim": "Therefore, the answer to the question \"Are Darren Benjamin Shepherd and Rémi Lange both American?\" is no.",
+     "raw": 0.27372675736414387,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.7499063611030579,
+     "novel_words": 0.3333333432674408,
+     "evidence": "Rémi Lange: Rémi Lange (born 4 February 1969 in Gennevilliers, Hauts-de-Seine) is a French film director."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 3111.652612686157,
+   "check_ms": 243.6959743499756
+  },
+  {
+   "id": "5a7c49dc55429935c91b514f",
+   "question": "The head of the Foreign Relations Department of the Rastriya Janashakti Party holds a degree that can be abbreviated MS, M.S., or ScM, in what field?",
+   "gold": "Engineering",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Hari Bahadur Basnet",
+    "Master of Science"
+   ],
+   "retrieved": [
+    "Master of Science",
+    "Master of Science in Leadership",
+    "JSS Science and Technology University"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the head of the Foreign Relations Department of the Rastriya Janashakti Party holds a Master of Science (MS) degree in a field related to science or technology. The exact field is not specified in the given passages, but it could be any area within the natural sciences, engineering, or applied sciences.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the head of the Foreign Relations Department of the Rastriya Janashakti Party holds a Master of Science (MS) degree in a field related to science or technology.",
+     "raw": 0.7821542017462685,
+     "p": 0.3081395348837209,
+     "action": "flag",
+     "support": 0.021068910136818886,
+     "novel_words": 0.6111111044883728,
+     "evidence": "Master of Science in Leadership: The Master of Science in Leadership (MSL) is a master's degree in leadership studies that is offered by a college of business."
+    },
+    {
+     "claim": "The exact field is not specified in the given passages, but it could be any area within the natural sciences, engineering, or applied sciences.",
+     "raw": 0.23848432594482585,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.9944861531257629,
+     "novel_words": 0.6428571343421936,
+     "evidence": "In contrast to the Master of Arts degree, the Master of Science degree is typically granted for studies in sciences, engineering, and medicine, and is usually for programs that are more focused on scientific and mathematical subjects; however, different universities have different conventions and may also offer the degree for fields typically considered within the humanities and social sciences."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 5479.918956756592,
+   "check_ms": 501.8186569213867
+  },
+  {
+   "id": "5abe364e5542993f32c2a08e",
+   "question": "Lollipop Chainsaw featured Juliet Starling, who was voiced by a Canadian-American actress who has done voice roles for what Teen Titans spinoff series?",
+   "gold": "Teen Titans Go!",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Lollipop Chainsaw",
+    "Tara Strong"
+   ],
+   "retrieved": [
+    "Lollipop Chainsaw",
+    "Teen Titans (season 4)",
+    "Tara Strong"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on passage 3, Tara Strong, who voiced Juliet Starling in Lollipop Chainsaw, has also done voice work for several other animated series and video games, including \"Teen Titans.\"",
+   "claims": [
+    {
+     "claim": "Based on passage 3, Tara Strong, who voiced Juliet Starling in Lollipop Chainsaw, has also done voice work for several other animated series and video games, including \"Teen Titans.\"",
+     "raw": 0.18464945873671332,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.018847979605197906,
+     "novel_words": 0.21739129722118378,
+     "evidence": "\", and \"\", as well as video games such as \"Mortal Kombat X\", \"Final Fantasy X-2\", and the \"\" series."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 3156.6171646118164,
+   "check_ms": 273.27775955200195
+  },
+  {
+   "id": "5ac557975542993e66e8231c",
+   "question": "What team was led to victory in 1939 by a two-time All-American basketball player nicknamed \"Scat\"?",
+   "gold": "Oklahoma Sooners",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Jimmy McNatt",
+    "Oklahoma Sooners men's basketball"
+   ],
+   "retrieved": [
+    "Jimmy McNatt",
+    "Kevin Durant",
+    "Three-peat"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2999691461264043,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": -0.0028082048520445824,
+     "novel_words": 1.0,
+     "evidence": "The term, a portmanteau of the words \"three\" and \"repeat\", originated with the Los Angeles Lakers of the National Basketball Association, during their unsuccessful campaign for a third consecutive championship during the 1988–89 season, having won the previous 2 NBA Finals in 1987 and 1988 against the Boston Celtics and Detroit Pistons, but were swept by the Pistons in the 1989 NBA Finals."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 920.8779335021973,
+   "check_ms": 311.64002418518066
+  },
+  {
+   "id": "5ab28a87554299449642c8ec",
+   "question": "This expansion of the 2008 magazine article \"Is Google Making Us Stoopid?\" was a finalist for what award?",
+   "gold": "Pulitzer Prize",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Is Google Making Us Stupid?",
+    "The Shallows (book)"
+   ],
+   "retrieved": [
+    "Is Google Making Us Stupid?",
+    "The Shallows (book)",
+    "Kaya Thomas"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2994655138302553,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.01734602265059948,
+     "novel_words": 1.0,
+     "evidence": "The book claims research shows \"online reading\" yields lower comprehension than reading a printed page."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 775.4669189453125,
+   "check_ms": 275.68793296813965
+  },
+  {
+   "id": "5adff056554299603e4183cc",
+   "question": "What year did The Chronicle of Philanthropy's publishing overlap with Antic?",
+   "gold": "1988",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Antic (magazine)",
+    "The Chronicle of Philanthropy"
+   ],
+   "retrieved": [
+    "The Chronicle of Philanthropy",
+    "Philanthropy (magazine)",
+    "The Humane Society of the United States"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.19039129476478533,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": -0.0012523233890533447,
+     "novel_words": 0.800000011920929,
+     "evidence": "Based in Washington, DC, it is aimed at charity leaders, foundation executives, fund raisers, and other people involved in philanthropy."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 743.6294555664062,
+   "check_ms": 234.375
+  },
+  {
+   "id": "5abd578a5542993062266c5d",
+   "question": "The W. H. Shipman House is in what Hawaii county?",
+   "gold": "Hawaii County",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Hilo, Hawaii",
+    "William Herbert Shipman"
+   ],
+   "retrieved": [
+    "William Herbert Shipman",
+    "W. H. Shipman House",
+    "Honolulu"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the W. H. Shipman House is located in Hilo, Hawaii.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the W. H. Shipman House is located in Hilo, Hawaii.",
+     "raw": 0.051620319236020666,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.6255890727043152,
+     "novel_words": 0.30000001192092896,
+     "evidence": "A historic house associated with his family for over a hundred years is called the W. H. Shipman House in Hilo, Hawaii."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 1702.852725982666,
+   "check_ms": 237.24031448364258
+  },
+  {
+   "id": "5a7b537555429927d897bf90",
+   "question": "The trophy given to the winner of the college football game between University of Idaho Vandals and University of Montana Grizzlies is derived from which European culture?",
+   "gold": "German",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Beer stein",
+    "Little Brown Stein"
+   ],
+   "retrieved": [
+    "Little Brown Stein",
+    "Hoosier Helmet Trophy",
+    "1952 Idaho Vandals football team"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the trophy given to the winner of the college football game between University of Idaho Vandals and University of Montana Grizzlies is named the Little Brown Stein and is derived from an American tradition.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the trophy given to the winner of the college football game between University of Idaho Vandals and University of Montana Grizzlies is named the Little Brown Stein and is derived from an American tradition.",
+     "raw": 0.25290047418858186,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.7479107975959778,
+     "novel_words": 0.3636363744735718,
+     "evidence": "Little Brown Stein: The Little Brown Stein is a rivalry trophy awarded to the winner of the college football game between the University of Idaho Vandals and University of Montana Grizzlies."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 3451.3137340545654,
+   "check_ms": 234.9262237548828
+  },
+  {
+   "id": "5a7dc3275542997cc2c4749c",
+   "question": "What stadium does the team who has Kent Baer as the defensive coordinator play its home games?",
+   "gold": "Sam Boyd Stadium",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Kent Baer",
+    "UNLV Rebels football"
+   ],
+   "retrieved": [
+    "Kent Baer",
+    "San Francisco 49ers",
+    "New England Patriots"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the team that has Kent Baer as the defensive coordinator is the UNLV Rebels. However, the passage about the San Francisco 49ers mentions their home stadium as Levi's Stadium in Santa Clara, California. Therefore, the correct answer would be either the San Francisco 49ers or the UNLV Rebels, depending on whether Kent Baer is associated with one of these teams.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the team that has Kent Baer as the defensive coordinator is the UNLV Rebels.",
+     "raw": 0.13219804436899416,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.2907601296901703,
+     "novel_words": 0.20000000298023224,
+     "evidence": "He is the defensive coordinator for UNLV Rebels."
+    },
+    {
+     "claim": "However, the passage about the San Francisco 49ers mentions their home stadium as Levi's Stadium in Santa Clara, California.",
+     "raw": 0.10949531437352504,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9948785305023193,
+     "novel_words": 0.3333333432674408,
+     "evidence": "The team currently plays its home games at Levi's Stadium in Santa Clara, California, located 45 mi southeast of San Francisco in the heart of Silicon Valley."
+    },
+    {
+     "claim": "Therefore, the correct answer would be either the San Francisco 49ers or the UNLV Rebels, depending on whether Kent Baer is associated with one of these teams.",
+     "raw": 0.5491068653686718,
+     "p": 0.11653116531165311,
+     "action": "show",
+     "support": 0.2975478768348694,
+     "novel_words": 0.5882353186607361,
+     "evidence": "Kent Baer: Kent Lex Baer (born May 2, 1951) is an American college football coach."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 6230.41296005249,
+   "check_ms": 292.3462390899658
+  },
+  {
+   "id": "5ab5487b554299494045ef68",
+   "question": "Operation Cold Comfort was a failed raid by a special forces unit founded in what year?",
+   "gold": "1941",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Operation Cold Comfort",
+    "Special Air Service"
+   ],
+   "retrieved": [
+    "Operation Cold Comfort",
+    "Special Air Service",
+    "Joint Special Operations Command (Jordan)"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on passage 2, the Special Air Service was founded in 1941.",
+   "claims": [
+    {
+     "claim": "Based on passage 2, the Special Air Service was founded in 1941.",
+     "raw": 0.13774707688167973,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.050115298479795456,
+     "novel_words": 0.375,
+     "evidence": "The SAS was founded in 1941 as a regiment, and later reconstituted as a corps in 1950."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 1529.390573501587,
+   "check_ms": 220.73817253112793
+  },
+  {
+   "id": "5ac2758b55429963665199c3",
+   "question": "The organization that Nicolae Titulescu served two terms as president was founded on what date?",
+   "gold": "10 January 1920",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "League of Nations",
+    "Nicolae Titulescu"
+   ],
+   "retrieved": [
+    "Nicolae Titulescu",
+    "Mustafa Kemal Atatürk",
+    "League of Nations"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on passage 1, Nicolae Titulescu served two terms as president of the General Assembly of the League of Nations from 1930 to 1932. However, there is no specific mention of when the League of Nations was founded in the provided passages. Therefore, I am unable to answer the question based solely on the given information.",
+   "claims": [
+    {
+     "claim": "Based on passage 1, Nicolae Titulescu served two terms as president of the General Assembly of the League of Nations from 1930 to 1932.",
+     "raw": 0.19546353219200932,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.7902939319610596,
+     "novel_words": 0.3333333432674408,
+     "evidence": "Nicolae Titulescu: Nicolae Titulescu (] ; March 4, 1882 – March 17, 1941) was a well-known Romanian diplomat, at various times government minister, finance and foreign minister, and for two terms President of the General Assembly of the League of Nations (1930–32)."
+    },
+    {
+     "claim": "However, there is no specific mention of when the League of Nations was founded in the provided passages.",
+     "raw": 0.2160697007276966,
+     "p": 0.04081632653061224,
+     "action": "show",
+     "support": 0.9734809994697571,
+     "novel_words": 0.7272727489471436,
+     "evidence": "Mustafa Kemal Atatürk: Mustafa Kemal Atatürk (] ; 19 May 1881 – 10 November 1938) was a Turkish army officer, revolutionary, and founder of the Republic of Turkey, serving as its first President from 1923 until his death in 1938."
+    },
+    {
+     "claim": "Therefore, I am unable to answer the question based solely on the given information.",
+     "raw": 0.7704070908195084,
+     "p": 0.2727272727272727,
+     "action": "flag",
+     "support": 0.019387880340218544,
+     "novel_words": 1.0,
+     "evidence": "League of Nations: The League of Nations (abbreviated as LN in English, \"La Société des Nations \" ] abbreviated as SDN or SdN in French) was an intergovernmental organisation founded on 10 January 1920 as a result of the Paris Peace Conference that ended the First World War."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 5607.448577880859,
+   "check_ms": 311.8314743041992
+  },
+  {
+   "id": "5ab7f97a5542991d322237ef",
+   "question": "What is Opry Mills in Nashville, Tennessee?",
+   "gold": "super-regional shopping mall",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Music City Queen",
+    "Opry Mills"
+   ],
+   "retrieved": [
+    "Opry Mills",
+    "Grand Ole Opry",
+    "Ryman Auditorium"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Opry Mills is a super-regional shopping mall located in Nashville, Tennessee, originally situated on the former site of the Opryland USA theme park. The Grand Ole Opry is a weekly country-music stage concert held in Nashville since 1925, dedicated to showcasing both classic and modern country artists. The Ryman Auditorium, now owned and operated by Ryman Hospitality Properties, Inc., has been the home of the Grand Ole Opry since 1943 until 1974.",
+   "claims": [
+    {
+     "claim": "Opry Mills is a super-regional shopping mall located in Nashville, Tennessee, originally situated on the former site of the Opryland USA theme park.",
+     "raw": 0.16328847592353732,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.0017643256578594446,
+     "novel_words": 0.11764705926179886,
+     "evidence": "It opened in Nashville, Tennessee in 2000 on the former site of the Opryland USA theme park."
+    },
+    {
+     "claim": "The Grand Ole Opry is a weekly country-music stage concert held in Nashville since 1925, dedicated to showcasing both classic and modern country artists.",
+     "raw": 0.3448423341443445,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.07286496460437775,
+     "novel_words": 0.3888888955116272,
+     "evidence": "Dedicated to honoring country music and its history, the Opry showcases a mix of famous singers and contemporary chart-toppers performing country, bluegrass, Americana, folk, gospel, and comedic performances and skits."
+    },
+    {
+     "claim": "The Ryman Auditorium, now owned and operated by Ryman Hospitality Properties, Inc., has been the home of the Grand Ole Opry since 1943 until 1974.",
+     "raw": 0.460228822568064,
+     "p": 0.09542743538767395,
+     "action": "show",
+     "support": 0.04946606978774071,
+     "novel_words": 0.1875,
+     "evidence": "Ryman Auditorium: Ryman Auditorium (formerly Grand Ole Opry House and Union Gospel Tabernacle) is a 2,362-seat live performance venue, located at 116 5th Avenue North, in Nashville, Tennessee and is best known as the home of the \"Grand Ole Opry\" from 1943 to 1974."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 7916.712999343872,
+   "check_ms": 330.4171562194824
+  },
+  {
+   "id": "5a81e107554299676cceb12a",
+   "question": "Ed Oxenbould plays Tyler in a film directed by which famous director?",
+   "gold": "M. Night Shyamalan",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Ed Oxenbould",
+    "The Visit (2015 American film)"
+   ],
+   "retrieved": [
+    "Ed Oxenbould",
+    "Tyler Bates",
+    "Edward Burns"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2985930862674684,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": -0.011922502890229225,
+     "novel_words": 1.0,
+     "evidence": "Much of his work is in the action and horror film genres, with films like \"Dawn of the Dead, 300, Sucker Punch,\" and \"John Wick.\""
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 820.3809261322021,
+   "check_ms": 315.8125877380371
+  },
+  {
+   "id": "5ab6f7415542991d322236f4",
+   "question": "Sadok Sassi played for a national team that made its first World Cup in what year?",
+   "gold": "1978",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Sadok Sassi",
+    "Tunisia national football team"
+   ],
+   "retrieved": [
+    "Sadok Sassi",
+    "Tunisia national football team",
+    "1970 FIFA World Cup"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on passage 2, Sadok Sassi played for the Tunisian national team, which made its first appearance in the World Cup in 1978.",
+   "claims": [
+    {
+     "claim": "Based on passage 2, Sadok Sassi played for the Tunisian national team, which made its first appearance in the World Cup in 1978.",
+     "raw": 0.26014424381578294,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.0014633577084168792,
+     "novel_words": 0.2666666805744171,
+     "evidence": "They have since qualified for the three tournaments in succession, in 1998, 2002 and 2006: they were the only African team to appear at both the 2002 and 2006 tournaments."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2785.0987911224365,
+   "check_ms": 272.2458839416504
+  },
+  {
+   "id": "5ac562985542993e66e823ca",
+   "question": "Otterington railway station was on a 393 mi major railway that linked Edinburgh to what city?",
+   "gold": "London",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "East Coast Main Line",
+    "Otterington railway station"
+   ],
+   "retrieved": [
+    "Otterington railway station",
+    "Edinburgh Waverley railway station",
+    "East Coast Main Line"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Otterington railway station was on the East Coast Main Line, which links Edinburgh to Peterborough. The passage also mentions that the East Coast Main Line is 393 miles long and serves as the northern terminus for services heading towards other Scottish destinations beyond Edinburgh.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Otterington railway station was on the East Coast Main Line, which links Edinburgh to Peterborough.",
+     "raw": 0.18415079875733584,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.0066034249030053616,
+     "novel_words": 0.3076923191547394,
+     "evidence": "East Coast Main Line: The East Coast Main Line (ECML) is a 393 mi major railway link between London and Edinburgh via Peterborough, Doncaster, Wakefield, Leeds, York, Darlington and Newcastle, electrified along the whole route."
+    },
+    {
+     "claim": "The passage also mentions that the East Coast Main Line is 393 miles long and serves as the northern terminus for services heading towards other Scottish destinations beyond Edinburgh.",
+     "raw": 0.5344713216341506,
+     "p": 0.1,
+     "action": "show",
+     "support": 0.10985630750656128,
+     "novel_words": 0.3333333432674408,
+     "evidence": "It is the northern terminus of the East Coast Main Line, 393 mi from , although some trains operated by Virgin Trains East Coast continue to other Scottish destinations beyond Edinburgh."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 4762.563467025757,
+   "check_ms": 241.4567470550537
+  },
+  {
+   "id": "5a87bd4e5542994846c1cde0",
+   "question": "Are both Coldplay and Pierre Bouvier from the same country?",
+   "gold": "no",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Coldplay",
+    "Pierre Bouvier"
+   ],
+   "retrieved": [
+    "Pierre Bouvier",
+    "Coldplay",
+    "Lost!"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Coldplay is from the UK while Pierre Bouvier is from Canada. Therefore, no, they are not from the same country.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Coldplay is from the UK while Pierre Bouvier is from Canada.",
+     "raw": 0.26216534871203717,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.9879921078681946,
+     "novel_words": 0.6666666865348816,
+     "evidence": "Coldplay: Coldplay are a British rock band formed in 1996 by lead vocalist and keyboardist Chris Martin and lead guitarist Jonny Buckland at University College London (UCL)."
+    },
+    {
+     "claim": "Therefore, no, they are not from the same country.",
+     "raw": 0.41163844064852706,
+     "p": 0.09542743538767395,
+     "action": "show",
+     "support": 0.2653670907020569,
+     "novel_words": 0.8333333134651184,
+     "evidence": "Lost!: \"Lost!\" is a song by the British rock band Coldplay."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2625.562906265259,
+   "check_ms": 337.1999263763428
+  },
+  {
+   "id": "5aba52e655429939ce03dc94",
+   "question": "This term about a playwright who lived from 1564-1616 presented what about his works? ",
+   "gold": "chronological collection of critical quotations",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Shakespeare's reputation",
+    "Timeline of Shakespeare criticism"
+   ],
+   "retrieved": [
+    "William Shakespeare",
+    "Shakespeare's plays",
+    "Shakespeare bibliography"
+   ],
+   "gold_retrieved": 0,
+   "answer": "Based on the provided passages, this term about a playwright who lived from 1564-1616 presents information about William Shakespeare's extensive body of work, which includes approximately 38 plays, 154 sonnets, two long narrative poems, and various other verses. These works are considered among the greatest in the English language and in Western literature.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, this term about a playwright who lived from 1564-1616 presents information about William Shakespeare's extensive body of work, which includes approximately 38 plays, 154 sonnets, two long narrative poems, and various other verses.",
+     "raw": 0.3320741635694772,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.9733835458755493,
+     "novel_words": 0.4333333373069763,
+     "evidence": "Shakespeare bibliography: William Shakespeare (1564–1616) was an English poet and playwright."
+    },
+    {
+     "claim": "These works are considered among the greatest in the English language and in Western literature.",
+     "raw": 0.04954866557176084,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9969276189804077,
+     "novel_words": 0.125,
+     "evidence": "Shakespeare's plays: The plays written by English poet, playwright, and actor William Shakespeare (1564 – 1616) have the reputation of being among the greatest in the English language and in Western literature."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 5657.654047012329,
+   "check_ms": 280.642032623291
+  },
+  {
+   "id": "5ab58f9a554299488d4d99da",
+   "question": "What is the birthday of this Anglo-Irish actress, courtean, and mistress, who was the mother to the illegitimate daughter of King William IV?",
+   "gold": "22 November",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Dorothea Jordan",
+    "Elizabeth Hay, Countess of Erroll"
+   ],
+   "retrieved": [
+    "Dorothea Jordan",
+    "Lady Mary Fox",
+    "Wilhelmina FitzClarence, Countess of Munster"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Dorothea Jordan, the Anglo-Irish actress, courtesan, and mistress of King William IV, was born on 22 November 1761.",
+   "claims": [
+    {
+     "claim": "Dorothea Jordan, the Anglo-Irish actress, courtesan, and mistress of King William IV, was born on 22 November 1761.",
+     "raw": 0.029469087049321233,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.7988346219062805,
+     "novel_words": 0.0714285746216774,
+     "evidence": "Dorothea Jordan: Dorothea Jordan (22 November 17615 July 1816) was an Anglo-Irish actress, courtesan, and the mistress and companion of the future King William IV of the United Kingdom, for 20 years while he was Duke of Clarence."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2899.9218940734863,
+   "check_ms": 231.89830780029297
+  },
+  {
+   "id": "5ae67def5542991bbc9760f3",
+   "question": "Kenneth L. Gile is the Chief Operating Officer of an airline with its head office in what airport?",
+   "gold": "Dubai International Airport",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Flydubai",
+    "Kenneth L. Gile"
+   ],
+   "retrieved": [
+    "Kenneth L. Gile",
+    "Hawaiian Airlines",
+    "Topeka Regional Airport"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on passage 3, Kenneth L. Gile serves as the Chief Operating Officer of an airline headquartered at Topeka Regional Airport in Shawnee County, Kansas.",
+   "claims": [
+    {
+     "claim": "Based on passage 3, Kenneth L. Gile serves as the Chief Operating Officer of an airline headquartered at Topeka Regional Airport in Shawnee County, Kansas.",
+     "raw": 0.11968037030183296,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.047841839492321014,
+     "novel_words": 0.2222222238779068,
+     "evidence": "Prior to joining Flydubai, Ken was the President and COO of now defunct Skybus Airlines and a former pilot and Director of Operations for Southwest Airlines."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 2655.498266220093,
+   "check_ms": 260.06460189819336
+  },
+  {
+   "id": "5adeb78a554299728e26c77a",
+   "question": "In what state is the manufacturer of Bisquick headquartered?",
+   "gold": "Minnesota",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Bisquick",
+    "General Mills"
+   ],
+   "retrieved": [
+    "Bisquick",
+    "E. Gluck Corporation",
+    "Daimler AG"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.29332969106665907,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0025577805936336517,
+     "novel_words": 1.0,
+     "evidence": "The luxury Maybach brand was terminated at the end of 2012, but revived in April 2015 as \"Mercedes-Maybach\" versions of the Mercedes-Benz S-Class and G-Class."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 790.7552719116211,
+   "check_ms": 264.7361755371094
+  },
+  {
+   "id": "5ae66d515542992ae0d16346",
+   "question": "In what year was the singer who popularized \"I'll Keep the Lovelight Burning\" born?",
+   "gold": "1927",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "I'll Keep the Lovelight Burning",
+    "Patti Page"
+   ],
+   "retrieved": [
+    "I'll Keep the Lovelight Burning",
+    "Mick Jagger",
+    "Bob Dylan"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.29402459294992916,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.003159109503030777,
+     "novel_words": 1.0,
+     "evidence": "Louis Armstrong also covered the song in 1949."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 809.2117309570312,
+   "check_ms": 253.6449432373047
+  },
+  {
+   "id": "5a8e60ca5542995a26add4d9",
+   "question": "In which movie the Stephanie Kay Panabaker was alongside with her elder sister Danielle Nicole Panabaker?",
+   "gold": "\"Read It and Weep\" (2006)",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Danielle Panabaker",
+    "Kay Panabaker"
+   ],
+   "retrieved": [
+    "Danielle Panabaker",
+    "Kay Panabaker",
+    "Read It and Weep"
+   ],
+   "gold_retrieved": 2,
+   "answer": "The passage mentions that Danielle Panabaker starred alongside her younger sister Kay Panabaker in the Disney film \"Read It and Weep\" released in 2006.",
+   "claims": [
+    {
+     "claim": "The passage mentions that Danielle Panabaker starred alongside her younger sister Kay Panabaker in the Disney film \"Read It and Weep\" released in 2006.",
+     "raw": 0.034534660246001,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9964179992675781,
+     "novel_words": 0.25,
+     "evidence": "She began acting as a teenager and first came to prominence for her roles in the Disney films \"Stuck in the Suburbs\" (2004), \"Sky High\" (2005) and \"Read It and Weep\" (2006), the latter alongside her younger sister Kay Panabaker, and in the HBO miniseries \"Empire Falls\" (2005)."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2698.8868713378906,
+   "check_ms": 255.5389404296875
+  },
+  {
+   "id": "5a72a2935542991f9a20c546",
+   "question": "Is Velvetpark or Shape magazine written more for a lesbian and queer-identified female readership?",
+   "gold": "Velvetpark",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Shape (magazine)",
+    "Velvetpark"
+   ],
+   "retrieved": [
+    "Velvetpark",
+    "Curve (magazine)",
+    "Shape (magazine)"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Velvetpark is written more for a lesbian and queer-identified female readership, featuring content related to music, literature, theater, fine arts, film, television, and social activism impacting queer culture. Shape magazine, on the other hand, appears to cater more to a broader audience interested in fitness and health, with its focus on academic and medically-oriented content.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Velvetpark is written more for a lesbian and queer-identified female readership, featuring content related to music, literature, theater, fine arts, film, television, and social activism impacting queer culture.",
+     "raw": 0.18917677727552545,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.6983628273010254,
+     "novel_words": 0.3199999928474426,
+     "evidence": "Velvetpark: Velvetpark: Dyke Culture in Bloom is a lesbian and feminist arts and culture website that regularly features music, literature, theater, fine arts, film, television, and social activism as it impacts queer culture."
+    },
+    {
+     "claim": "Shape magazine, on the other hand, appears to cater more to a broader audience interested in fitness and health, with its focus on academic and medically-oriented content.",
+     "raw": 0.6823871640359839,
+     "p": 0.24390243902439024,
+     "action": "flag",
+     "support": 0.006592003628611565,
+     "novel_words": 0.7058823704719543,
+     "evidence": "Velvetpark: Velvetpark: Dyke Culture in Bloom is a lesbian and feminist arts and culture website that regularly features music, literature, theater, fine arts, film, television, and social activism as it impacts queer culture."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 5831.277370452881,
+   "check_ms": 334.02156829833984
+  },
+  {
+   "id": "5a7f7b3b5542992097ad2f81",
+   "question": "Which restaurant chain's headquarters is further north, Pizza Inn or Papa Gino's?",
+   "gold": "Papa Gino's",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Papa Gino's",
+    "Pizza Inn"
+   ],
+   "retrieved": [
+    "Papa Gino's",
+    "Pizza Inn",
+    "Gino's Pizza and Spaghetti"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Pizza Inn's headquarters is further north than Papa Gino's. The passage for Pizza Inn states that it is headquartered in The Colony, Texas, which is located in the southern part of the United States. In contrast, the passage for Papa Gino's mentions that its headquarters are in Dedham, Massachusetts, which is situated in the northeastern part of the country. Therefore, Pizza Inn has a northern location compared to Papa Gino's.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Pizza Inn's headquarters is further north than Papa Gino's.",
+     "raw": 0.4521078029419821,
+     "p": 0.09542743538767395,
+     "action": "show",
+     "support": 0.004018140956759453,
+     "novel_words": 0.4166666567325592,
+     "evidence": "Pizza Inn: Pizza Inn is an American restaurant chain and international food franchise, specializing in American-style pan pizza and side dishes."
+    },
+    {
+     "claim": "The passage for Pizza Inn states that it is headquartered in The Colony, Texas, which is located in the southern part of the United States.",
+     "raw": 0.6158608238323459,
+     "p": 0.11653116531165311,
+     "action": "show",
+     "support": 0.0030800963286310434,
+     "novel_words": 0.4545454680919647,
+     "evidence": "The company is based in the Dallas suburb of The Colony, Texas."
+    },
+    {
+     "claim": "In contrast, the passage for Papa Gino's mentions that its headquarters are in Dedham, Massachusetts, which is situated in the northeastern part of the country.",
+     "raw": 0.30364139581390787,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.9847785234451294,
+     "novel_words": 0.5384615659713745,
+     "evidence": "Papa Gino's: Papa Gino's, Inc. is a restaurant chain based in Dedham, Massachusetts specializing in American-style pizza along with pasta, subs, salads, and a variety of appetizers."
+    },
+    {
+     "claim": "Therefore, Pizza Inn has a northern location compared to Papa Gino's.",
+     "raw": 0.34849334094238227,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.02458646520972252,
+     "novel_words": 0.4444444477558136,
+     "evidence": "Gino's Pizza and Spaghetti: Gino's Pizza and Spaghetti is a restaurant chain with 40 locations, most of them within the U.S. state of West Virginia."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 7113.059997558594,
+   "check_ms": 367.6598072052002
+  },
+  {
+   "id": "5a82ebb855429966c78a6a9c",
+   "question": "whats the famous bavagheet by arun date?",
+   "gold": "Shukratara",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Arun Date",
+    "Bhavageete"
+   ],
+   "retrieved": [
+    "Arun Date",
+    "Arun Thapa",
+    "Gautama Siddha"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Arun Date is a renowned Marathi singer who gained fame through his bhavageetis. One of his most famous songs is \"Shukratara,\" which he composed and performed. This song was awarded as the Song of the Month by Mumbai Radio Station in 1962 and has since become an iconic piece of contemporary Marathi culture. Arun Date's success led him to receive the prestigious Gajananrav Vatave Purskar award. His father, Ramubhaiyya Date, was a government official in Indore and was involved in the Marathi literary and music circles.",
+   "claims": [
+    {
+     "claim": "Arun Date is a renowned Marathi singer who gained fame through his bhavageetis.",
+     "raw": 0.2658930764043264,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0904209315776825,
+     "novel_words": 0.5,
+     "evidence": "Arun Date: Arun Date is a well known Marathi singer of Bhavageete."
+    },
+    {
+     "claim": "One of his most famous songs is \"Shukratara,\" which he composed and performed.",
+     "raw": 0.2706488854172217,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0017688756342977285,
+     "novel_words": 0.3333333432674408,
+     "evidence": "The song \"Shukratara by Date\" was adjudged as song of the month by Mumbai Radio Station in 1962 and remains one of the most popular song in contemporary Marathi culture."
+    },
+    {
+     "claim": "This song was awarded as the Song of the Month by Mumbai Radio Station in 1962 and has since become an iconic piece of contemporary Marathi culture.",
+     "raw": 0.35056457586123935,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.9872395992279053,
+     "novel_words": 0.3571428656578064,
+     "evidence": "The song \"Shukratara by Date\" was adjudged as song of the month by Mumbai Radio Station in 1962 and remains one of the most popular song in contemporary Marathi culture."
+    },
+    {
+     "claim": "Arun Date's success led him to receive the prestigious Gajananrav Vatave Purskar award.",
+     "raw": 0.6696033489624074,
+     "p": 0.24390243902439024,
+     "action": "flag",
+     "support": 0.005453156307339668,
+     "novel_words": 0.5833333134651184,
+     "evidence": "Arun Date was first recipient of Gajananrav Vatave Purskar."
+    },
+    {
+     "claim": "His father, Ramubhaiyya Date, was a government official in Indore and was involved in the Marathi literary and music circles.",
+     "raw": 0.4800662460311244,
+     "p": 0.09542743538767395,
+     "action": "show",
+     "support": 0.14687862992286682,
+     "novel_words": 0.1666666716337204,
+     "evidence": "His father Ramubhaiyya was a government officer in Indore, and was part of Marathi literary and music circles."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 9189.541578292847,
+   "check_ms": 573.5325813293457
+  },
+  {
+   "id": "5add596f5542990dbb2f7e4d",
+   "question": "Grown-Ups starred the actor who was best known for which role on  \"'Allo 'Allo!\"?",
+   "gold": "Captain Hans Geering",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Grown-Ups",
+    "Sam Kelly"
+   ],
+   "retrieved": [
+    "Grown-Ups",
+    "Grown Ups 2",
+    "Emilio Estevez"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on passage 3, Emilio Estevez, who was part of the acting Brat Pack of the 1980s, starred in the 1983 hit movie \"The Outsiders.\" However, there is no mention of him starring in \"Grown-Ups\" or any other specific role related to this film. Therefore, I am unable to answer the question based on the given passages.",
+   "claims": [
+    {
+     "claim": "Based on passage 3, Emilio Estevez, who was part of the acting Brat Pack of the 1980s, starred in the 1983 hit movie \"The Outsiders.\"",
+     "raw": 0.22508260235707642,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.08261852711439133,
+     "novel_words": 0.2666666805744171,
+     "evidence": "He started his career as an actor and is well known for being a member of the acting Brat Pack of the 1980s, starring in \"The Breakfast Club\", \"St. Elmo's Fire\", and also acting in the 1983 hit movie \"The Outsiders\"."
+    },
+    {
+     "claim": "However, there is no mention of him starring in \"Grown-Ups\" or any other specific role related to this film.",
+     "raw": 0.5539301317983399,
+     "p": 0.11653116531165311,
+     "action": "show",
+     "support": 0.11390800774097443,
+     "novel_words": 0.7142857313156128,
+     "evidence": "Emilio Estevez ( ; born May 12, 1962) is an American actor, director, and writer."
+    },
+    {
+     "claim": "Therefore, I am unable to answer the question based on the given passages.",
+     "raw": 0.7507392848147767,
+     "p": 0.25581395348837205,
+     "action": "flag",
+     "support": 0.022819874808192253,
+     "novel_words": 1.0,
+     "evidence": "Grown Ups 2: Grown Ups 2 is a 2013 American comedy film directed by Dennis Dugan and co-produced by Adam Sandler, who also starred in the film."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 6336.878538131714,
+   "check_ms": 447.5133419036865
+  },
+  {
+   "id": "5ac4db1d554299076e296e1a",
+   "question": "who is a British physicist  and also a  British government's chief scientific adviser",
+   "gold": "Frederick Alexander",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Dehousing",
+    "Frederick Lindemann, 1st Viscount Cherwell"
+   ],
+   "retrieved": [
+    "Government Office for Science",
+    "Frederick Lindemann, 1st Viscount Cherwell",
+    "David J. C. MacKay"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the British physicist and also the British government's chief scientific adviser is Sir David John Cameron MacKay. He served as the Regius Professor of Engineering at the University of Cambridge and later became the Chief Scientific Adviser to the UK Department of Energy and Climate Change (DECC) from 2009 to 2014.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the British physicist and also the British government's chief scientific adviser is Sir David John Cameron MacKay.",
+     "raw": 0.11034536487584197,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.10126283019781113,
+     "novel_words": 0.125,
+     "evidence": "David J. C. MacKay: Sir David John Cameron MacKay {'1': \", '2': \", '3': \", '4': \"} (22 April 1967 – 14 April 2016) was a British physicist, mathematician, and academic."
+    },
+    {
+     "claim": "He served as the Regius Professor of Engineering at the University of Cambridge and later became the Chief Scientific Adviser to the UK Department of Energy and Climate Change (DECC) from 2009 to 2014.",
+     "raw": 0.1247942563853989,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.996837317943573,
+     "novel_words": 0.15000000596046448,
+     "evidence": "He was the Regius Professor of Engineering in the Department of Engineering at the University of Cambridge and from 2009 to 2014 was Chief Scientific Adviser to the UK Department of Energy and Climate Change (DECC)."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 5387.916326522827,
+   "check_ms": 370.0094223022461
+  },
+  {
+   "id": "5ac532335542994611c8b41c",
+   "question": "Howard Van Doren Shaw was the designer of which 1917 Progressive Era community? ",
+   "gold": "Marktown",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Howard Van Doren Shaw",
+    "Marktown"
+   ],
+   "retrieved": [
+    "Howard Van Doren Shaw",
+    "Ragdale",
+    "Good Design"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, Howard Van Doren Shaw designed the 1917 Progressive Era community known as Marktown, which was developed by Clayton Mark in Northwest Indiana.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Howard Van Doren Shaw designed the 1917 Progressive Era community known as Marktown, which was developed by Clayton Mark in Northwest Indiana.",
+     "raw": 0.40089455285620174,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.002870153868570924,
+     "novel_words": 0.3684210479259491,
+     "evidence": "He designed Marktown, Clayton Mark's planned worker community in Northwest Indiana."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2686.6302490234375,
+   "check_ms": 217.9849147796631
+  },
+  {
+   "id": "5ae7a8d35542994a481bbdbb",
+   "question": "Which contest in California pays homage to an American novelist that won the Novel Prize in Literature in 1954?",
+   "gold": "The Bad Hemingway Contest",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Ernest Hemingway",
+    "International Imitation Hemingway Competition"
+   ],
+   "retrieved": [
+    "Ernest Hemingway",
+    "Orson Scott Card",
+    "Gabriel García Márquez"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2980284375996299,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.004335305653512478,
+     "novel_words": 1.0,
+     "evidence": "He pursued a self-directed education that resulted in his leaving law school for a career in journalism."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 788.461446762085,
+   "check_ms": 287.6858711242676
+  },
+  {
+   "id": "5a8db348554299068b959dc2",
+   "question": "What is the subsidiary of the record company who released \"Love Incredible?\"",
+   "gold": "Vivendi S.A.",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Interscope Records",
+    "Love Incredible"
+   ],
+   "retrieved": [
+    "Love Incredible",
+    "Hollywood Records",
+    "Domino Recording Company"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.18216547723521312,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": -0.0039546615444123745,
+     "novel_words": 0.800000011920929,
+     "evidence": "It was released on 17 February 2017 through Interscope and Mad Love as the third single from his debut album, \"9\"."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 758.3296298980713,
+   "check_ms": 259.40656661987305
+  },
+  {
+   "id": "5adcbb815542994ed6169bde",
+   "question": "Beer Wars covers the differences between large corporate breweries, and small breweries, such as what brewery that is headquartered in Escondido, california?",
+   "gold": "Stone Brewing",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Beer Wars",
+    "Stone Brewing Co."
+   ],
+   "retrieved": [
+    "Beer Wars",
+    "Stone Brewing Co.",
+    "MillerCoors"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Stone Brewing Co. is headquartered in Escondido, California. It is one of the many small breweries mentioned in Beer Wars, which covers the differences between large corporate breweries and smaller craft breweries.",
+   "claims": [
+    {
+     "claim": "Stone Brewing Co. is headquartered in Escondido, California.",
+     "raw": 0.012251090767223671,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9984896183013916,
+     "novel_words": 0.0,
+     "evidence": "Stone Brewing is a brewery headquartered in Escondido, California, USA."
+    },
+    {
+     "claim": "It is one of the many small breweries mentioned in Beer Wars, which covers the differences between large corporate breweries and smaller craft breweries.",
+     "raw": 0.3055567716741856,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.003406565636396408,
+     "novel_words": 0.2857142984867096,
+     "evidence": "In particular, it covers the differences between large corporate breweries, namely Anheuser-Busch, the Miller Brewing Company, and the Coors Brewing Company opposed to smaller breweries like Dogfish Head Brewery, Moonshot 69, Yuengling, Stone Brewing Co., and other producers of craft beer."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2860.65411567688,
+   "check_ms": 274.3368148803711
+  },
+  {
+   "id": "5ab915ad55429919ba4e239c",
+   "question": "Who did Muhummad Ali fight next, in Houston, after the so-called Fight of the Century with Joe Frazier?",
+   "gold": "Jimmy Ellis",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Fight of the Century",
+    "Muhammad Ali vs. Jimmy Ellis"
+   ],
+   "retrieved": [
+    "Fight of the Century (disambiguation)",
+    "Fight of the Century",
+    "Muhammad Ali"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, there is no specific mention of who Muhammad Ali fought next in Houston after the \"Fight of the Century\" against Joe Frazier. Therefore, I am unable to answer this question based solely on the given information.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, there is no specific mention of who Muhammad Ali fought next in Houston after the \"Fight of the Century\" against Joe Frazier.",
+     "raw": 0.5188804229994537,
+     "p": 0.1,
+     "action": "show",
+     "support": 0.8130641579627991,
+     "novel_words": 0.6666666865348816,
+     "evidence": "Fight of the Century: The Fight of the Century (also known as The Fight) is the title boxing writers and historians have given to the boxing match between WBC/WBA heavyweight champion Joe Frazier (26–0, 23 KOs) and Ring magazine/lineal heavyweight champion Muhammad Ali: Muhammad Ali ( ; born Cassius Marcellus Clay Jr.; January 17, 1942 – June 3, 2016) was an American professional boxer and activist."
+    },
+    {
+     "claim": "Therefore, I am unable to answer this question based solely on the given information.",
+     "raw": 0.5973990421982371,
+     "p": 0.11653116531165311,
+     "action": "show",
+     "support": 0.2324274182319641,
+     "novel_words": 0.8999999761581421,
+     "evidence": "Fight of the Century: The Fight of the Century (also known as The Fight) is the title boxing writers and historians have given to the boxing match between WBC/WBA heavyweight champion Joe Frazier (26–0, 23 KOs) and Ring magazine/lineal heavyweight champion Muhammad Ali: Muhammad Ali ( ; born Cassius Marcellus Clay Jr.; January 17, 1942 – June 3, 2016) was an American professional boxer and activist."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 3611.236095428467,
+   "check_ms": 240.2503490447998
+  },
+  {
+   "id": "5ab94fa25542996be2020474",
+   "question": "What is represented on the cover art of the studio album that includes the song \"Speed of Sound\"?",
+   "gold": "Baudot code",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Speed of Sound (song)",
+    "X&amp;Y"
+   ],
+   "retrieved": [
+    "Speed of Sound (song)",
+    "Speed Graphic (EP)",
+    "The Pod"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2997575275475282,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0018584888894110918,
+     "novel_words": 1.0,
+     "evidence": "The song premiered in the UK on 23 May."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 857.7311038970947,
+   "check_ms": 413.6059284210205
+  },
+  {
+   "id": "5a7ca0ef55429907fabeefd3",
+   "question": "Which professional tennis player was born first, Lucie Hradecká or Raffaella Reggi?",
+   "gold": "Raffaella Reggi",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Lucie Hradecká",
+    "Raffaella Reggi"
+   ],
+   "retrieved": [
+    "Raffaella Reggi",
+    "Lucie Hradecká",
+    "Lucie Šafářová"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Raffaella Reggi was born first, as she was born on 27 November 1965, while Lucie Hradecká was born on 21 May 1985.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Raffaella Reggi was born first, as she was born on 27 November 1965, while Lucie Hradecká was born on 21 May 1985.",
+     "raw": 0.03815827892682752,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.8929249048233032,
+     "novel_words": 0.23529411852359772,
+     "evidence": "Lucie Hradecká (] ; born 21 May 1985 in Prague) is a professional tennis player from the Czech Republic."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 3791.9116020202637,
+   "check_ms": 237.04767227172852
+  },
+  {
+   "id": "5a7a5b3a5542996c55b2dd71",
+   "question": "What building is opposite the ceremonial meeting place of the Accession Council in the United Kingdom?",
+   "gold": "Mark Masons' Hall",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Mark Masons' Hall, London",
+    "St James's Palace"
+   ],
+   "retrieved": [
+    "Accession Council",
+    "St James's Palace",
+    "Buckingham Palace"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the building opposite the ceremonial meeting place of the Accession Council in the United Kingdom is St James's Palace.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the building opposite the ceremonial meeting place of the Accession Council in the United Kingdom is St James's Palace.",
+     "raw": 0.15580368843355386,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.012068968266248703,
+     "novel_words": 0.3125,
+     "evidence": "St James's Palace: St James's Palace is the most senior royal palace in the United Kingdom."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 2081.5277099609375,
+   "check_ms": 212.87250518798828
+  },
+  {
+   "id": "5abbd3ac55429931dba1458b",
+   "question": "Are both Duke Energy and Affiliated Managers Group based in Massachusetts?",
+   "gold": "no",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Affiliated Managers Group",
+    "Duke Energy"
+   ],
+   "retrieved": [
+    "Affiliated Managers Group",
+    "Duke Energy",
+    "Progress Energy Inc"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Duke Energy is headquartered in Charlotte, North Carolina, which is not in Massachusetts. On the other hand, Affiliated Managers Group is headquartered in Massachusetts. Therefore, the statement that both Duke Energy and Affiliated Managers Group are based in Massachusetts is incorrect.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Duke Energy is headquartered in Charlotte, North Carolina, which is not in Massachusetts.",
+     "raw": 0.06906344212458415,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9975351095199585,
+     "novel_words": 0.3636363744735718,
+     "evidence": "Duke Energy: Duke Energy, headquartered in Charlotte, North Carolina, is an electric power holding company in the United States, with assets also in Canada and Latin America."
+    },
+    {
+     "claim": "On the other hand, Affiliated Managers Group is headquartered in Massachusetts.",
+     "raw": 0.06277077353546044,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9981359243392944,
+     "novel_words": 0.2857142984867096,
+     "evidence": "Affiliated Managers Group: Affiliated Managers Group Inc. is an American international investment management company headquartered in Massachusetts that owns stakes in a number of boutique asset management, hedge fund, and specialized private equity firms."
+    },
+    {
+     "claim": "Therefore, the statement that both Duke Energy and Affiliated Managers Group are based in Massachusetts is incorrect.",
+     "raw": 0.22856643750613512,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.6796507239341736,
+     "novel_words": 0.4545454680919647,
+     "evidence": "Progress Energy Inc: Progress Energy, headquartered in Raleigh, North Carolina, is a subsidiary of Duke Energy and prior to its merger with Duke Energy was a Fortune 500 energy company with more than 21,000 megawatts of generation capacity and $9 billion in annual revenues."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 4185.40620803833,
+   "check_ms": 252.7477741241455
+  },
+  {
+   "id": "5ac3af895542995ef918c1f0",
+   "question": "Janne Kyttanen has had work exhibited at which modern art museum in Amsterdam?",
+   "gold": "Stedelijk Museum Amsterdam",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Janne Kyttanen",
+    "Stedelijk Museum Amsterdam"
+   ],
+   "retrieved": [
+    "Stedelijk Museum Amsterdam",
+    "Rijksmuseum",
+    "Van Gogh Museum"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, Janne Kyttanen has had work exhibited at the Stedelijk Museum Amsterdam.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Janne Kyttanen has had work exhibited at the Stedelijk Museum Amsterdam.",
+     "raw": 0.4503028170254807,
+     "p": 0.09542743538767395,
+     "action": "show",
+     "support": 0.0009533860720694065,
+     "novel_words": 0.699999988079071,
+     "evidence": "Stedelijk Museum Amsterdam: The Stedelijk Museum Amsterdam (] ; Municipal Museum Amsterdam), colloquially known as the Stedelijk, is a museum for modern art, contemporary art, and design located in Amsterdam, Netherlands."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 1831.8662643432617,
+   "check_ms": 188.48490715026855
+  },
+  {
+   "id": "5a72dcb45542992359bc31af",
+   "question": "What company did Rex Maughan aquire?",
+   "gold": "Aloe Vera of America",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Forever Living Products",
+    "Rex Maughan"
+   ],
+   "retrieved": [
+    "Rex Maughan",
+    "REX American Resources",
+    "Chevrolet"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, it appears that Rex Maughan acquired Bear in mind that your response should be strictly based on the following 3 passages: passage 1: Rex Maughan: Rex G. Maughan is the founder, president, and CEO of Forever Living Products, a multi-level marketing program that sells aloe-vera based cosmetics and other personal products. He is also a real-estate investor. passage 2: REX American Resources: REX American Resources Corp. (REX; ) is an American producer and retailer of ethanol, distillers grains and natural gas as well as a holding company in energy entities. It was founded in 1980 and is headquartered in Dayton, Ohio. The company has the entire ownership of three affiliated corporations including Rex Radio and Television, Inc., Stereo Town, Inc. and Kelly & Cohen Appliances, Inc. As of 2012, the company has the ownership of 22 national retail stores",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, it appears that Rex Maughan acquired Bear in mind that your response should be strictly based on the following 3 passages: passage 1: Rex Maughan: Rex G. Maughan is the founder, president, and CEO of Forever Living Products, a multi-level marketing program that sells aloe-vera based cosmetics and other personal products.",
+     "raw": 0.7944023926434868,
+     "p": 0.3081395348837209,
+     "action": "flag",
+     "support": 0.03852647915482521,
+     "novel_words": 0.3529411852359772,
+     "evidence": "Chevrolet: Chevrolet ( ), colloquially referred to as Chevy and formally the Chevrolet Division of General Motors Company, is an American automobile division of the American manufacturer General Motors (GM)."
+    },
+    {
+     "claim": "He is also a real-estate investor.",
+     "raw": 0.02844908224172338,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9987666606903076,
+     "novel_words": 0.0,
+     "evidence": "He is also a real-estate investor."
+    },
+    {
+     "claim": "passage 2: REX American Resources: REX American Resources Corp. (REX; ) is an American producer and retailer of ethanol, distillers grains and natural gas as well as a holding company in energy entities.",
+     "raw": 0.31041800472416387,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.03364337608218193,
+     "novel_words": 0.0555555559694767,
+     "evidence": "As of 2012, the company has the ownership of 22 national retail stores and invested in five ethanol production entities nationwide."
+    },
+    {
+     "claim": "It was founded in 1980 and is headquartered in Dayton, Ohio.",
+     "raw": 0.034974798528249196,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9969536066055298,
+     "novel_words": 0.0,
+     "evidence": "It was founded in 1980 and is headquartered in Dayton, Ohio."
+    },
+    {
+     "claim": "The company has the entire ownership of three affiliated corporations including Rex Radio and Television, Inc., Stereo Town, Inc. and Kelly & Cohen Appliances, Inc.",
+     "raw": 0.11797562679483845,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.926678478717804,
+     "novel_words": 0.0,
+     "evidence": "The company has the entire ownership of three affiliated corporations including Rex Radio and Television, Inc., Stereo Town, Inc. and Kelly & Cohen Appliances, Inc."
+    },
+    {
+     "claim": "As of 2012, the company has the ownership of 22 national retail stores",
+     "raw": 0.045196241404481634,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9987021684646606,
+     "novel_words": 0.0,
+     "evidence": "As of 2012, the company has the ownership of 22 national retail stores and invested in five ethanol production entities nationwide."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 14411.497354507446,
+   "check_ms": 922.0771789550781
+  },
+  {
+   "id": "5ae1e22a5542997f29b3c160",
+   "question": "The role of \"Celene\" in the film \"Walk All over Me\" was played by an actress that voices what role in the \"Starcraft 2\" triolgy?",
+   "gold": "Sarah Kerrigan",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Tricia Helfer",
+    "Walk All over Me"
+   ],
+   "retrieved": [
+    "Walk All over Me",
+    "Paula Patton",
+    "Emmanuelle Vaugier"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.182294861324875,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.006270112469792366,
+     "novel_words": 0.800000011920929,
+     "evidence": "Walk All over Me: Walk All Over Me is a Canadian film released in 2007 written by Robert Cuffley and Jason Long."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 770.3967094421387,
+   "check_ms": 249.44567680358887
+  },
+  {
+   "id": "5ae6316d5542996de7b71b87",
+   "question": "Which FC Barcelona signee was a contender for the Rookie of the Year Award when he played for the Timberwolves?",
+   "gold": "Ricard Rubio i Vives",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "2011–12 Minnesota Timberwolves season",
+    "Ricky Rubio"
+   ],
+   "retrieved": [
+    "Ricky Rubio",
+    "Andrew Wiggins",
+    "Karl-Anthony Towns"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Ricky Rubio was a contender for the Rookie of the Year Award when he played for the Timberwolves.",
+   "claims": [
+    {
+     "claim": "Ricky Rubio was a contender for the Rookie of the Year Award when he played for the Timberwolves.",
+     "raw": 0.127714774546556,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.6691709756851196,
+     "novel_words": 0.30000001192092896,
+     "evidence": "He was selected with the first overall pick in the 2015 NBA draft by the Minnesota Timberwolves, and went on to be named NBA Rookie of the Year for the 2015–16 season."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 1839.7066593170166,
+   "check_ms": 319.9338912963867
+  },
+  {
+   "id": "5ade4801554299728e26c6ab",
+   "question": "Wolf and Sheep was screened at which 2016 film festival?",
+   "gold": "69th Cannes Film Festival",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "2016 Cannes Film Festival",
+    "Wolf and Sheep"
+   ],
+   "retrieved": [
+    "Wolf and Sheep",
+    "Sheep and Wolves",
+    "The Wolf of Wall Street (2013 film)"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.1889767886603746,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": -0.0033400964457541704,
+     "novel_words": 0.800000011920929,
+     "evidence": "Matthew McConaughey, Rob Reiner, Jon Favreau, Joanna Lumley and Jean Dujardin also star."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 759.5305442810059,
+   "check_ms": 300.97055435180664
+  },
+  {
+   "id": "5a9064c755429916514e74a6",
+   "question": "What is the first name of Jack Benny Binion's father?",
+   "gold": "Lester",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Benny Binion",
+    "Jack Binion"
+   ],
+   "retrieved": [
+    "Jack Binion",
+    "Benny Binion",
+    "James Brolin"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, the first name of Jack Benny Binion's father is Lester.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the first name of Jack Benny Binion's father is Lester.",
+     "raw": 0.2765915277552649,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.4373766779899597,
+     "novel_words": 0.4545454680919647,
+     "evidence": "Benny Binion: Lester Ben \"Benny\" Binion (November 20, 1904 – December 25, 1989) was an American gambling icon and mob boss."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 1568.0863857269287,
+   "check_ms": 205.5380344390869
+  },
+  {
+   "id": "5addc79d5542995b365fab7b",
+   "question": "Which episode of SpongeBob SquarePants aired first, The Clash of Triton or To SquarePants or Not to SquarePants?\"",
+   "gold": "To SquarePants or Not to SquarePants",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "SpongeBob SquarePants (season 6)",
+    "The Clash of Triton"
+   ],
+   "retrieved": [
+    "The Clash of Triton",
+    "SpongeBob SquarePants (season 6)",
+    "Rock Bottom (SpongeBob SquarePants)"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, \"The Clash of Triton\" aired first, being the 26th episode of the sixth season of \"SpongeBob SquarePants,\" which originally aired on July 5, 2010.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, \"The Clash of Triton\" aired first, being the 26th episode of the sixth season of \"SpongeBob SquarePants,\" which originally aired on July 5, 2010.",
+     "raw": 0.1608448270948839,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.0028257796075195074,
+     "novel_words": 0.2222222238779068,
+     "evidence": "It originally aired on Nickelodeon in the United States on July 5, 2010."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 3764.9405002593994,
+   "check_ms": 272.22704887390137
+  },
+  {
+   "id": "5ac097b05542996f0d89cc18",
+   "question": "Are Ruggero Deodato from Italy, and Mexican Alejandro Springall, both film directors?",
+   "gold": "yes",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Alejandro Springall",
+    "Ruggero Deodato"
+   ],
+   "retrieved": [
+    "Ruggero Deodato",
+    "Alejandro Springall",
+    "Hercules, Prisoner of Evil"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Yes, Ruggero Deodato is from Italy, and Alejandro Springall is from Mexico. Both individuals are indeed film directors.",
+   "claims": [
+    {
+     "claim": "Yes, Ruggero Deodato is from Italy, and Alejandro Springall is from Mexico.",
+     "raw": 0.40001892240599585,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.020293278619647026,
+     "novel_words": 0.4285714328289032,
+     "evidence": "Alejandro Springall: Alejandro Springall is a Mexican film director and producer."
+    },
+    {
+     "claim": "Both individuals are indeed film directors.",
+     "raw": 0.13909134368989917,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.993424117565155,
+     "novel_words": 0.800000011920929,
+     "evidence": "Hercules, Prisoner of Evil: Hercules, Prisoner of Evil (Italian: \"Ursus il terrore dei Kirghisi\" , 'Ursus, Terror of the Kirghiz' ) is a 1964 Italian \"peplum\" film directed by Antonio Margheriti and an uncredited Ruggero Deodato. Deodato, the official assistant director, replaced Margheriti as he was busy with the completion of the film \"The Fall of Rome\"."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2138.413906097412,
+   "check_ms": 207.38744735717773
+  },
+  {
+   "id": "5a79caad5542994f819ef09f",
+   "question": "Which professional baseball player was born in 1984 and played as a rookie for the Los Angeles Dogers in 2007?",
+   "gold": "Matthew Ryan Kemp",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "2007 Los Angeles Dodgers season",
+    "Matt Kemp"
+   ],
+   "retrieved": [
+    "2007 Los Angeles Dodgers season",
+    "Clay Buchholz",
+    "Balls of Fury"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the professional baseball player born in 1984 who played as a rookie for the Los Angeles Dodgers in 2007 was Clay Buchholz. Clay Buchholz was born on August 14, 1984, and made his MLB debut with the Boston Red Sox in 2007.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the professional baseball player born in 1984 who played as a rookie for the Los Angeles Dodgers in 2007 was Clay Buchholz.",
+     "raw": 0.19013012050652686,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.12850522994995117,
+     "novel_words": 0.3125,
+     "evidence": "Clay Buchholz: Clay Daniel Buchholz (born August 14, 1984) is an American professional baseball pitcher for the Philadelphia Phillies of Major League Baseball (MLB)."
+    },
+    {
+     "claim": "Clay Buchholz was born on August 14, 1984, and made his MLB debut with the Boston Red Sox in 2007.",
+     "raw": 0.13459326702530752,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.011230755597352982,
+     "novel_words": 0.0,
+     "evidence": "Buchholz made his MLB debut with the Boston Red Sox in 2007."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 5406.137466430664,
+   "check_ms": 274.72591400146484
+  },
+  {
+   "id": "5a83a31c554299123d8c2179",
+   "question": "Who is the lead vocalist for Maroon 5's sixth studio album?",
+   "gold": "Adam Levine",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Maroon 5",
+    "What Lovers Do"
+   ],
+   "retrieved": [
+    "Maroon 5's sixth studio album",
+    "Maroon 5",
+    "Don't Wanna Know"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the lead vocalist for Maroon 5's sixth studio album is Adam Levine.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the lead vocalist for Maroon 5's sixth studio album is Adam Levine.",
+     "raw": 0.091951995866698,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.029948918148875237,
+     "novel_words": 0.23076923191547394,
+     "evidence": "Maroon 5: Maroon 5 is an American pop rock band that originated in Los Angeles, California."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 1691.359519958496,
+   "check_ms": 231.7960262298584
+  },
+  {
+   "id": "5a72830e5542994cef4bc2f9",
+   "question": "Where is the company that distributed XXXTentacion's single \"Revenge\" based?",
+   "gold": "San Francisco, California",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Empire Distribution",
+    "Revenge (song)"
+   ],
+   "retrieved": [
+    "Revenge (song)",
+    "Revenge (XXXTentacion album)",
+    "17 (XXXTentacion album)"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2953892607374711,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": -0.000255008228123188,
+     "novel_words": 1.0,
+     "evidence": "It was preceded by the lead single \"Look at Me\", which peaked at number 34 on the US \"Billboard\" Hot 100."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 681.4191341400146,
+   "check_ms": 218.214750289917
+  },
+  {
+   "id": "5abaca935542996606241610",
+   "question": "\"Text Me Merry Christmas\" is a song performed by Kristen Bell and a group that originated at what univeristy?",
+   "gold": "Indiana University",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Straight No Chaser (group)",
+    "Text Me Merry Christmas"
+   ],
+   "retrieved": [
+    "Text Me Merry Christmas",
+    "Maroon 5",
+    "Hilary Duff"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.29598952929316685,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0001880275085568428,
+     "novel_words": 1.0,
+     "evidence": "The song was released on November 17, 2014."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 721.6081619262695,
+   "check_ms": 245.3155517578125
+  },
+  {
+   "id": "5ae0a59a55429945ae9593e2",
+   "question": "This Celtic ruler who was born in AD 43 ruled southeastern Britain prior to conquest by which empire?",
+   "gold": "Roman",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Catuvellauni",
+    "Togodumnus"
+   ],
+   "retrieved": [
+    "Constantine II of Scotland",
+    "Roman conquest of Britain",
+    "George I of Great Britain"
+   ],
+   "gold_retrieved": 0,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.31732353403019953,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.014558086171746254,
+     "novel_words": 1.0,
+     "evidence": "Its southern limit was the River Forth, northwards it extended towards the Moray Firth and perhaps to Caithness, while its western limits are uncertain."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 821.0189342498779,
+   "check_ms": 286.6077423095703
+  },
+  {
+   "id": "5ab700ca5542991d32223736",
+   "question": "Which other film did one of the supporting cast in \"Sleepless in Seattle\" appear?",
+   "gold": "\"Now and Then\" (1995)",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Rita Wilson",
+    "Sleepless in Seattle"
+   ],
+   "retrieved": [
+    "Sleepless in Seattle",
+    "In My Sleep",
+    "Rita Wilson"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Rita Wilson, one of the supporting cast members in \"Sleepless in Seattle,\" also appeared in the film \"In My Sleep.\"",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Rita Wilson, one of the supporting cast members in \"Sleepless in Seattle,\" also appeared in the film \"In My Sleep.\"",
+     "raw": 0.2492251368947926,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.2594817876815796,
+     "novel_words": 0.25,
+     "evidence": "In My Sleep: In My Sleep is a 2010 suspense thriller film written, directed and produced by film director Allen Wolf."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 2491.121530532837,
+   "check_ms": 270.7831859588623
+  },
+  {
+   "id": "5a8bd49d5542997f31a41dd7",
+   "question": "Who is this American cartoonist, writer, producer, animator, and voice actor that worked with this multiple Shuster Award, Harvey Award and Eisner Award nominee and an Eisner Award–winning comic book creator?",
+   "gold": "Matt Groening",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Ian Boothby",
+    "Matt Groening"
+   ],
+   "retrieved": [
+    "Will Eisner",
+    "Chuck BB",
+    "Ub Iwerks"
+   ],
+   "gold_retrieved": 0,
+   "answer": "Based on the provided passages, the American cartoonist, writer, producer, animator, and voice actor mentioned in the question is Will Eisner. He won multiple Shuster Award, Harvey Award, and Eisner Award nominations and has been recognized for his contributions to the comic book industry.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the American cartoonist, writer, producer, animator, and voice actor mentioned in the question is Will Eisner.",
+     "raw": 0.25407712017334166,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.4598219096660614,
+     "novel_words": 0.5714285969734192,
+     "evidence": "The Eisner Award was named in his honor, and is given to recognize achievements each year in the comics medium; he was one of the three inaugural inductees to the Will Eisner Comic Book Hall of Fame."
+    },
+    {
+     "claim": "He won multiple Shuster Award, Harvey Award, and Eisner Award nominations and has been recognized for his contributions to the comic book industry.",
+     "raw": 0.46536523238466543,
+     "p": 0.09542743538767395,
+     "action": "show",
+     "support": 0.87595134973526,
+     "novel_words": 0.4285714328289032,
+     "evidence": "Chuck BB: Chuck BB (born 1981 in California) is an Eisner Award winning American comic book creator, best known for his work on \"Spider-Man\", \"Fear Agent\", and Oni's \"Black Metal\"."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 4190.574645996094,
+   "check_ms": 314.90302085876465
+  },
+  {
+   "id": "5ae4d3a55542990ba0bbb164",
+   "question": "What creature of American folklore gained notoriety in 1964?",
+   "gold": "Dewey Lake Monster",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Bigfoot",
+    "Dewey Lake Monster"
+   ],
+   "retrieved": [
+    "Choking Doberman",
+    "Pukwudgie",
+    "Bigfoot"
+   ],
+   "gold_retrieved": 1,
+   "answer": "The creature of American folklore that gained notoriety in 1964 was the Pukwudgie.",
+   "claims": [
+    {
+     "claim": "The creature of American folklore that gained notoriety in 1964 was the Pukwudgie.",
+     "raw": 0.18733324493033196,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.006503998767584562,
+     "novel_words": 0.4285714328289032,
+     "evidence": "Pukwudgie: A Pukwudgie also spelled Puk-Wudjie (another spelling, \"Puck-wudj-ininee\", is translated by Henry Schoolcraft as \"little wild man of the woods that vanishes\") is a creature found in Delaware and Wampanoag folklore, sometimes said to be 2 to ."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 1811.882495880127,
+   "check_ms": 220.94368934631348
+  },
+  {
+   "id": "5ab29346554299545a2cf997",
+   "question": "What CBS-affiliated station serves Pontotoc County, Oklahoma?",
+   "gold": "KXII",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Ada, Oklahoma",
+    "KXII"
+   ],
+   "retrieved": [
+    "Pontotoc, Oklahoma",
+    "Pontotoc County, Oklahoma",
+    "Pontotoc County School District"
+   ],
+   "gold_retrieved": 0,
+   "answer": "Based on the provided passages, there is no specific mention of any CBS-affiliated station serving Pontotoc County, Oklahoma. Therefore, I am unable to answer this question based on the given information.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, there is no specific mention of any CBS-affiliated station serving Pontotoc County, Oklahoma.",
+     "raw": 0.2794660646629348,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.9780166149139404,
+     "novel_words": 0.7333333492279053,
+     "evidence": "\" Pontotoc County School District: The Pontotoc County School District is a public school district based in Pontotoc County, Mississippi (USA)."
+    },
+    {
+     "claim": "Therefore, I am unable to answer this question based on the given information.",
+     "raw": 0.6342685321032469,
+     "p": 0.15384615384615385,
+     "action": "show",
+     "support": 0.0024681382346898317,
+     "novel_words": 0.8888888955116272,
+     "evidence": "Pontotoc County, Oklahoma: Pontotoc County is in the south central part of Oklahoma."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 3203.3655643463135,
+   "check_ms": 211.00664138793945
+  },
+  {
+   "id": "5a776fc15542997042120a3a",
+   "question": "What is the mascot of the oldest private university in Georgia?",
+   "gold": "The Bears",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "2012–13 Mercer Bears men's basketball team",
+    "Mercer University"
+   ],
+   "retrieved": [
+    "Mercer University",
+    "University of Georgia",
+    "Savannah State University"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.3118964303133505,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": -0.06303184479475021,
+     "novel_words": 1.0,
+     "evidence": "The University is a member-school of the Thurgood Marshall College Fund."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 872.6398944854736,
+   "check_ms": 210.5109691619873
+  },
+  {
+   "id": "5ab3ede755429976abd1bcf4",
+   "question": "Who directed the 1940 film in which John Arledge appeared?",
+   "gold": "John Ford",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "John Arledge",
+    "The Grapes of Wrath (film)"
+   ],
+   "retrieved": [
+    "John Arledge",
+    "The Roaring Twenties",
+    "County Fair (1937 film)"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on passage 3, the 1940 film in which John Arledge appeared was \"County Fair\" (1937 film), directed by Howard Bretherton.",
+   "claims": [
+    {
+     "claim": "Based on passage 3, the 1940 film in which John Arledge appeared was \"County Fair\" (1937 film), directed by Howard Bretherton.",
+     "raw": 0.1401739262087022,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": -0.0026650766376405954,
+     "novel_words": 0.2857142984867096,
+     "evidence": "John Arledge: John Arledge (March 12, 1906 – May 15, 1947) was an American film and stage actor."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 2935.692548751831,
+   "check_ms": 227.5705337524414
+  },
+  {
+   "id": "5a80071f5542992bc0c4a684",
+   "question": "Alice David is the voice of Lara Croft in a video game developed by which company ?",
+   "gold": "Crystal Dynamics",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Alice David",
+    "Tomb Raider (2013 video game)"
+   ],
+   "retrieved": [
+    "Alice David",
+    "Lara Croft",
+    "Tomb Raider"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on passage 1, Alice David is the voice of Lara Croft in the video game \"Tomb Raider,\" which was developed by Square Enix.",
+   "claims": [
+    {
+     "claim": "Based on passage 1, Alice David is the voice of Lara Croft in the video game \"Tomb Raider,\" which was developed by Square Enix.",
+     "raw": 0.1208989565629451,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.00416567362844944,
+     "novel_words": 0.20000000298023224,
+     "evidence": "She is the voice of the French dub of Lara Croft in the video game \"Tomb Raider\"."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 2551.8453121185303,
+   "check_ms": 290.79580307006836
+  },
+  {
+   "id": "5ae08a0455429924de1b70fc",
+   "question": "Which German project recorded a song that featured vocals by a duo from Silverdale, England?",
+   "gold": "Enigma",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Amen (Enigma song)",
+    "Aquilo (band)"
+   ],
+   "retrieved": [
+    "Feuerwerk (song)",
+    "Stars (Roxette song)",
+    "Aquilo (band)"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, there is no mention of a German project featuring vocals by a duo from Silverdale, England. Therefore, I am unable to answer the question based on the given information.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, there is no mention of a German project featuring vocals by a duo from Silverdale, England.",
+     "raw": 0.09836383526549893,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.966472864151001,
+     "novel_words": 0.6153846383094788,
+     "evidence": "Aquilo (band): Aquilo is an alternative musical duo from Silverdale, Lancashire, England, consisting of Tom Higham and Ben Fletcher."
+    },
+    {
+     "claim": "Therefore, I am unable to answer the question based on the given information.",
+     "raw": 0.7089009014771657,
+     "p": 0.2506339937815926,
+     "action": "flag",
+     "support": 0.005064802244305611,
+     "novel_words": 1.0,
+     "evidence": "Its music video was directed by Anton Corbijn."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 3345.3190326690674,
+   "check_ms": 270.5550193786621
+  },
+  {
+   "id": "5ab484415542990594ba9c44",
+   "question": "Which facility was founded in Missouri, Discovery Zone or Valentino's?",
+   "gold": "Discovery Zone",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Discovery Zone",
+    "Valentino's"
+   ],
+   "retrieved": [
+    "Valentino's",
+    "Discovery Zone",
+    "Valentino SpA"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Valentino's was founded in Lincoln, Nebraska, while Discovery Zone was founded in Kansas City, Missouri.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Valentino's was founded in Lincoln, Nebraska, while Discovery Zone was founded in Kansas City, Missouri.",
+     "raw": 0.08850025765366155,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.07032284140586853,
+     "novel_words": 0.1428571492433548,
+     "evidence": "Valentino's: Valentino's is a regional Italian restaurant chain based in Lincoln, Nebraska."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 1971.759557723999,
+   "check_ms": 233.15072059631348
+  },
+  {
+   "id": "5a811667554299260e20a23d",
+   "question": "What occupations do both Ian Hunter and Rob Thomas have?",
+   "gold": "singer, songwriter",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Ian Hunter (singer)",
+    "Rob Thomas (musician)"
+   ],
+   "retrieved": [
+    "Ian Hunter (singer)",
+    "Rob Thomas (musician)",
+    "Ian Hunter (album)"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Ian Hunter and Rob Thomas both have careers in music. Ian Hunter has been involved in various musical projects throughout his life, including being the lead singer of the English rock band Mott the Hoople and later embarking on a solo career. Rob Thomas, on the other hand, is primarily known as the lead singer of the alternative band Matchbox Twenty and has also released a solo album titled \"Lonely No More.\"",
+   "claims": [
+    {
+     "claim": "Ian Hunter and Rob Thomas both have careers in music.",
+     "raw": 0.03675577332641099,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9947176575660706,
+     "novel_words": 0.4285714328289032,
+     "evidence": "Thomas also records and performs as a solo artist with \"Lonely No More\" released in 2005 becoming his biggest solo chart success."
+    },
+    {
+     "claim": "Ian Hunter has been involved in various musical projects throughout his life, including being the lead singer of the English rock band Mott the Hoople and later embarking on a solo career.",
+     "raw": 0.1760090711167475,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.9867677688598633,
+     "novel_words": 0.4545454680919647,
+     "evidence": "Ian Hunter (album): Ian Hunter is the first solo album by Ian Hunter, recorded following his departure from Mott the Hoople."
+    },
+    {
+     "claim": "Rob Thomas, on the other hand, is primarily known as the lead singer of the alternative band Matchbox Twenty and has also released a solo album titled \"Lonely No More.\"",
+     "raw": 0.5571357086078934,
+     "p": 0.11653116531165311,
+     "action": "show",
+     "support": 0.13897953927516937,
+     "novel_words": 0.25,
+     "evidence": "Thomas also records and performs as a solo artist with \"Lonely No More\" released in 2005 becoming his biggest solo chart success."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 6375.155687332153,
+   "check_ms": 485.02111434936523
+  },
+  {
+   "id": "5a81c7d15542990a1d231ea9",
+   "question": "Which services did Rock Nominees Ltd and  ISS A/S (Integrated Service Solutions) have in common?",
+   "gold": "cleaning, catering and security",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "ISS A/S",
+    "Rock (Nominees) Ltd v RCO Holdings Ltd"
+   ],
+   "retrieved": [
+    "ISS A/S",
+    "Rock (Nominees) Ltd v RCO Holdings Ltd",
+    "Integrated Broadband Services"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Rock Nominees Ltd and ISS A/S had in common providing facility services. Both entities offer various types of services such as cleaning, support, property, catering, security, and facility management. However, their primary focus differs significantly; while Rock Nominees Ltd specializes in holding shares on behalf of other companies, ISS A/S is a Danish company that offers comprehensive facility services globally.",
+   "claims": [
+    {
+     "claim": "Rock Nominees Ltd and ISS A/S had in common providing facility services.",
+     "raw": 0.11928659063171301,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.01189633458852768,
+     "novel_words": 0.2222222238779068,
+     "evidence": "ISS A/S: ISS A/S (Integrated Service Solutions) is a Facility Services company founded in Copenhagen, Denmark in 1901."
+    },
+    {
+     "claim": "Both entities offer various types of services such as cleaning, support, property, catering, security, and facility management.",
+     "raw": 0.32313611039293477,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.047404881566762924,
+     "novel_words": 0.3571428656578064,
+     "evidence": "ISS services include: cleaning services, support services, property services, catering services, security services and facility management services."
+    },
+    {
+     "claim": "However, their primary focus differs significantly; while Rock Nominees Ltd specializes in holding shares on behalf of other companies, ISS A/S is a Danish company that offers comprehensive facility services globally.",
+     "raw": 0.7719157815025103,
+     "p": 0.2727272727272727,
+     "action": "flag",
+     "support": 0.028019824996590614,
+     "novel_words": 0.5199999809265137,
+     "evidence": "ISS A/S: ISS A/S (Integrated Service Solutions) is a Facility Services company founded in Copenhagen, Denmark in 1901."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 5878.461599349976,
+   "check_ms": 560.5742931365967
+  },
+  {
+   "id": "5a716ec85542994082a3e82d",
+   "question": "Which movie was filmed first \"The Guest\" or \"You're Next\"?",
+   "gold": "You're Next",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "The Guest (film)",
+    "You're Next"
+   ],
+   "retrieved": [
+    "The Guest (film)",
+    "Christopher Guest",
+    "You're Next"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, \"You're Next\" was filmed first. The passage states that \"You're Next\" is a 2011 American slasher film directed by Adam Wingard, which predates \"The Guest,\" which is described as a 2014 American action horror-thriller film.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, \"You're Next\" was filmed first.",
+     "raw": 0.4051069635659137,
+     "p": 0.09542743538767395,
+     "action": "show",
+     "support": 0.007859504781663418,
+     "novel_words": 0.625,
+     "evidence": "The Guest (film): The Guest is a 2014 American action horror-thriller film directed and edited by Adam Wingard and written by Simon Barrett, both of whom previously collaborated on a previous film, \"You're Next\" (2011)."
+    },
+    {
+     "claim": "The passage states that \"You're Next\" is a 2011 American slasher film directed by Adam Wingard, which predates \"The Guest,\" which is described as a 2014 American action horror-thriller film.",
+     "raw": 0.12373286680737819,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.942593514919281,
+     "novel_words": 0.21052631735801697,
+     "evidence": "The Guest (film): The Guest is a 2014 American action horror-thriller film directed and edited by Adam Wingard and written by Simon Barrett, both of whom previously collaborated on a previous film, \"You're Next\" (2011)."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 4948.402643203735,
+   "check_ms": 353.41382026672363
+  },
+  {
+   "id": "5ade25ed5542997c77aded70",
+   "question": "During what war were the Russia-United Kingdom relations in a state of rivalry after the abdication of Emperor Nicholas II? ",
+   "gold": "the Cold War (1947–91)",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Russian Revolution",
+    "Russia–United Kingdom relations"
+   ],
+   "retrieved": [
+    "Russia–United Kingdom relations",
+    "Nicholas II of Russia",
+    "Russian Civil War"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on passage 3, the Russia-United Kingdom relations were in a state of rivalry after the abdication of Emperor Nicholas II during the Russian Civil War, which lasted from November 1917 to October 1922.",
+   "claims": [
+    {
+     "claim": "Based on passage 3, the Russia-United Kingdom relations were in a state of rivalry after the abdication of Emperor Nicholas II during the Russian Civil War, which lasted from November 1917 to October 1922.",
+     "raw": 0.2966129183275611,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0077937631867825985,
+     "novel_words": 0.17391304671764374,
+     "evidence": "Due to the Khodynka Tragedy, anti-Semitic pogroms, Bloody Sunday, the violent suppression of the 1905 Revolution, the execution of political opponents and his perceived responsibility for the Russo-Japanese War, he was given the nickname Nicholas the Bloody by his political adversaries."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 4047.8901863098145,
+   "check_ms": 489.5942211151123
+  },
+  {
+   "id": "5a89dd4d554299669944a5e3",
+   "question": "Flower Alley was bred by the trainer who was killed at what Fayette County, Kentucky airport?",
+   "gold": "Blue Grass Airport",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Blue Grass Airport",
+    "Flower Alley"
+   ],
+   "retrieved": [
+    "Flower Alley",
+    "Blue Grass Airport",
+    "Lexington, Kentucky"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.30054936977030794,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": -0.00011441204696893692,
+     "novel_words": 1.0,
+     "evidence": "He was bred at Bona Terra Farms by George Brunacini, who was killed in the August 27, 2006, crash of Comair Flight 5191 at Blue Grass Airport in Lexington, Kentucky."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 773.1208801269531,
+   "check_ms": 259.0680122375488
+  },
+  {
+   "id": "5abba3cd554299642a094aee",
+   "question": "How many different schools does the university, in which Andrew J. Elliot is a professor of psychology, have?",
+   "gold": "six",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Andrew J. Elliot",
+    "University of Rochester"
+   ],
+   "retrieved": [
+    "Andrew J. Elliot",
+    "University of Rochester",
+    "Rutgers University"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on passage 2, the University of Rochester has six schools.",
+   "claims": [
+    {
+     "claim": "Based on passage 2, the University of Rochester has six schools.",
+     "raw": 0.111850633794128,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.0013085412792861462,
+     "novel_words": 0.4285714328289032,
+     "evidence": "His research on the hierarchical model of approach and avoidance motivation focuses on combining classic and contemporary methods to test various theories."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 1084.9969387054443,
+   "check_ms": 196.89178466796875
+  },
+  {
+   "id": "5ac540365542994611c8b470",
+   "question": "Loughborough Students' Union serves the students at what public research university that has been a university since 1966, but the institution dates back to 1909?",
+   "gold": "Loughborough University",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Loughborough Students' Union",
+    "Loughborough University"
+   ],
+   "retrieved": [
+    "Loughborough University",
+    "Loughborough Students' Union",
+    "Loughborough University F.C."
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, Loughborough Students' Union serves the students at Loughborough University, which has been a university since 1966 but dates back to 1909 when the Loughborough Technical Institute began.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Loughborough Students' Union serves the students at Loughborough University, which has been a university since 1966 but dates back to 1909 when the Loughborough Technical Institute began.",
+     "raw": 0.2512426035650069,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.13255329430103302,
+     "novel_words": 0.1764705926179886,
+     "evidence": "Loughborough Students' Union: Loughborough Students' Union (otherwise known as LSU) is the students' union serving members from Loughborough University, Loughborough College and the RNIB College Loughborough."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 3820.113182067871,
+   "check_ms": 216.9649600982666
+  },
+  {
+   "id": "5ae199305542997b2ef7d20e",
+   "question": "In what european city is a location of the college from which the woman known as Comic Book Girl 19 received her degree?",
+   "gold": "Lacoste, France",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Comic Book Girl 19",
+    "Savannah College of Art and Design"
+   ],
+   "retrieved": [
+    "Comic Book Girl 19",
+    "University of Groningen",
+    "Peggy Adam"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on passage 1, the college from which the woman known as Comic Book Girl 19 received her degree is the Savannah College of Art and Design.",
+   "claims": [
+    {
+     "claim": "Based on passage 1, the college from which the woman known as Comic Book Girl 19 received her degree is the Savannah College of Art and Design.",
+     "raw": 0.1687267208290696,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.021065417677164078,
+     "novel_words": 0.3125,
+     "evidence": "She has a degree in sequential art from the Savannah College of Art and Design."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 2443.715810775757,
+   "check_ms": 209.91897583007812
+  },
+  {
+   "id": "5ae789615542997ec2727695",
+   "question": "Kam Heskin plays Paige Morgan in a 2004 film directed by who?",
+   "gold": "Martha Coolidge",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Kam Heskin",
+    "The Prince and Me"
+   ],
+   "retrieved": [
+    "Kam Heskin",
+    "The Prince and Me",
+    "The Prince &amp; Me 2: The Royal Wedding"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on passage 2, Kam Heskin played Paige Morgan in the 2004 romantic comedy film \"The Prince and Me,\" which was directed by Martha Coolidge.",
+   "claims": [
+    {
+     "claim": "Based on passage 2, Kam Heskin played Paige Morgan in the 2004 romantic comedy film \"The Prince and Me,\" which was directed by Martha Coolidge.",
+     "raw": 0.11747249744193156,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.0001725794281810522,
+     "novel_words": 0.1764705926179886,
+     "evidence": "The film focuses on Paige Morgan, a pre-med college student in Wisconsin, who is pursued by a prince posing as a normal college student."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2776.836156845093,
+   "check_ms": 241.10794067382812
+  },
+  {
+   "id": "5a75e67d5542992db9473709",
+   "question": "What was a series of battles during the Revolutionary War, for control of New York City and the state of New Jersey, fought on October 28, 1776 near White Plains, New York?",
+   "gold": "New York and New Jersey campaign",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Battle of White Plains",
+    "New York and New Jersey campaign"
+   ],
+   "retrieved": [
+    "Battle of White Plains",
+    "Battle of Mamaroneck",
+    "New York and New Jersey campaign"
+   ],
+   "gold_retrieved": 2,
+   "answer": "The Battle of White Plains was a significant engagement in the New York and New Jersey campaign of the American Revolutionary War, fought on October 28, 1776, near White Plains, New York. This battle saw British General William Howe land troops in Westchester County, aiming to cut off George Washington's escape route. Alerted to this move, Washington retreated further, establishing a position in the village of White Plains but failing to secure firm control over local high ground. Howe's troops then drove Washington's troops from a nearby hill, leading to Washington ordering them to retreat even farther north.",
+   "claims": [
+    {
+     "claim": "The Battle of White Plains was a significant engagement in the New York and New Jersey campaign of the American Revolutionary War, fought on October 28, 1776, near White Plains, New York.",
+     "raw": 0.11586845329525355,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.845600426197052,
+     "novel_words": 0.11764705926179886,
+     "evidence": "Battle of White Plains: The Battle of White Plains was a battle in the New York and New Jersey campaign of the American Revolutionary War fought on October 28, 1776, near White Plains, New York."
+    },
+    {
+     "claim": "This battle saw British General William Howe land troops in Westchester County, aiming to cut off George Washington's escape route.",
+     "raw": 0.06719313987761391,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9938362240791321,
+     "novel_words": 0.1666666716337204,
+     "evidence": "Following the retreat of George Washington's Continental Army northward from New York City, British General William Howe landed troops in Westchester County, intending to cut off Washington's escape route."
+    },
+    {
+     "claim": "Alerted to this move, Washington retreated further, establishing a position in the village of White Plains but failing to secure firm control over local high ground.",
+     "raw": 0.13622485737911913,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.9941645860671997,
+     "novel_words": 0.1666666716337204,
+     "evidence": "Alerted to this move, Washington retreated farther, establishing a position in the village of White Plains but failed to establish firm control over local high ground."
+    },
+    {
+     "claim": "Howe's troops then drove Washington's troops from a nearby hill, leading to Washington ordering them to retreat even farther north.",
+     "raw": 0.22695196592127698,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.9991044402122498,
+     "novel_words": 0.4000000059604645,
+     "evidence": "Howe's troops drove Washington's troops from a hill near the village; following this loss, Washington ordered the Americans to retreat farther north. Battle of Mamaroneck: The Battle of Mamaroneck was a skirmish in the New York and New Jersey campaign of the American Revolutionary War fought on October 22, 1776, at Mamaroneck, Westchester County, New York."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 8938.717603683472,
+   "check_ms": 574.7652053833008
+  },
+  {
+   "id": "5a8a5a1955429930ff3c0da7",
+   "question": "In what year was the Sayrevill, New Jersey rock band that Frankie LaRocka played drums for formed?",
+   "gold": "1983",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Bon Jovi",
+    "Frankie LaRocka"
+   ],
+   "retrieved": [
+    "Frankie LaRocka",
+    "My Chemical Romance",
+    "Bon Jovi"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.29557331852459146,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": -0.0003087860532104969,
+     "novel_words": 1.0,
+     "evidence": "Shortly after the album's release, Pelissier was replaced by Bob Bryar."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 782.700777053833,
+   "check_ms": 283.2458019256592
+  },
+  {
+   "id": "5a7bc0755542995eb53be9a5",
+   "question": "The series of novels that reference numerous locations and incorporates themes from multiple genres is titled what?",
+   "gold": "The Dark Tower",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Places in The Dark Tower series",
+    "The Dark Tower (series)"
+   ],
+   "retrieved": [
+    "Places in The Dark Tower series",
+    "The Dark Tower (series)",
+    "Themes in A Song of Ice and Fire"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, the series of novels that reference numerous locations and incorporates themes from multiple genres is titled \"The Dark Tower.\" This series, authored by Stephen King, includes elements from dark fantasy, science fantasy, horror, and Western genres and serves as part of King's multiverse concept.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the series of novels that reference numerous locations and incorporates themes from multiple genres is titled \"The Dark Tower.\"",
+     "raw": 0.25019398358351164,
+     "p": 0.047619047619047616,
+     "action": "show",
+     "support": 0.009471120312809944,
+     "novel_words": 0.3333333432674408,
+     "evidence": "Places in The Dark Tower series: \"The Dark Tower\" series of novels, by Stephen King, contain references to numerous locations."
+    },
+    {
+     "claim": "This series, authored by Stephen King, includes elements from dark fantasy, science fantasy, horror, and Western genres and serves as part of King's multiverse concept.",
+     "raw": 0.40160969520861695,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0011115807574242353,
+     "novel_words": 0.3529411852359772,
+     "evidence": "The series, and its use of the Dark Tower, expands upon Stephen King's multiverse and in doing so, links together many of his other novels."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 4462.681770324707,
+   "check_ms": 339.04457092285156
+  },
+  {
+   "id": "5ae7535c5542997b22f6a6d8",
+   "question": "The 53rd National Hockey League All-Star Game took place at the indoor arena that was completed in what year?",
+   "gold": "1998",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "53rd National Hockey League All-Star Game",
+    "BB&amp;T Center (Sunrise, Florida)"
+   ],
+   "retrieved": [
+    "53rd National Hockey League All-Star Game",
+    "Winnipeg Arena",
+    "63rd National Hockey League All-Star Game"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.3171238520846603,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.05615712329745293,
+     "novel_words": 1.0,
+     "evidence": "The All-Star Game will be played in lieu of NHL participation in the 2018 Olympics, as the NHL Board of Governors ruled against interrupting the season to send players to PyeongChang from 10–25 February."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 838.5708332061768,
+   "check_ms": 274.85156059265137
+  },
+  {
+   "id": "5adf95745542995534e8c7f8",
+   "question": "Where does Śivarāma Swami conduct courses on Vaishnava Theology?",
+   "gold": "in the village of Aldenham",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Bhaktivedanta Manor",
+    "Sivarama Swami"
+   ],
+   "retrieved": [
+    "Sivarama Swami",
+    "Kenneth R. Valpey",
+    "Suhotra Swami"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, Śivarāma Swami conducts courses on Vaishnava Theology at Bhaktivedanta Manor.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, Śivarāma Swami conducts courses on Vaishnava Theology at Bhaktivedanta Manor.",
+     "raw": 0.03757404908124554,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9031270146369934,
+     "novel_words": 0.3333333432674408,
+     "evidence": "He is a professor at Bhaktivedanta College where the central program of study is in Vaishnava Theology."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 2367.0499324798584,
+   "check_ms": 398.0295658111572
+  },
+  {
+   "id": "5adf3c155542993a75d2643a",
+   "question": "What is the given name of the character depicted as Juliet Hulme in Heavenly Creatures?",
+   "gold": "Anne Perry",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Anne Perry",
+    "Heavenly Creatures"
+   ],
+   "retrieved": [
+    "Heavenly Creatures",
+    "Kate Winslet filmography",
+    "She Creature"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on the provided passages, the given name of the character depicted as Juliet Hulme in Heavenly Creatures is Juliet.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the given name of the character depicted as Juliet Hulme in Heavenly Creatures is Juliet.",
+     "raw": 0.2763574381083881,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.14966405928134918,
+     "novel_words": 0.6363636255264282,
+     "evidence": "Kate Winslet is a British actress and singer who has appeared in numerous films and television series."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 1916.5394306182861,
+   "check_ms": 298.8615036010742
+  },
+  {
+   "id": "5ac1a6bf5542991316484b8d",
+   "question": "In what state did this band form that is an American metalcore band, founded in mid-2009, and whose lead vocalist was Jerry Roush?",
+   "gold": "California",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Glass Cloud",
+    "Of Mice &amp; Men (band)"
+   ],
+   "retrieved": [
+    "Glass Cloud",
+    "The Dead Weather",
+    "Disturbed (band)"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.29325638136238086,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0014879710506647825,
+     "novel_words": 1.0,
+     "evidence": "Former band members are bassist Steve Kmak and vocalist Erich Awalt."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 709.7434997558594,
+   "check_ms": 256.0386657714844
+  },
+  {
+   "id": "5a87b2fc5542996e4f3088d0",
+   "question": "Who wrote the book that inspired the name of the CD/DVD \"Here at the End of All Things\"?",
+   "gold": "J. R. R. Tolkien",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Here at the End of All Things",
+    "The Return of the King"
+   ],
+   "retrieved": [
+    "Here at the End of All Things",
+    "The Invention of Everything Else",
+    "A Thing of Beauty"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.3008041905804036,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0021774196065962315,
+     "novel_words": 1.0,
+     "evidence": "It was taped on December 15, 2007 in South Hackensack, New Jersey."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 712.6944065093994,
+   "check_ms": 233.90579223632812
+  },
+  {
+   "id": "5a807ca5554299485f598613",
+   "question": "Where was the original line of the railroad William Howard worked for?",
+   "gold": "the port of Baltimore west to Sandy Hook",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Baltimore and Ohio Railroad",
+    "William Howard (engineer)"
+   ],
+   "retrieved": [
+    "William Howard (engineer)",
+    "Erie Railroad",
+    "Baltimore and Ohio Railroad"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on passage 3, the original line of the Baltimore and Ohio Railroad started from the port of Baltimore and went west to Sandy Hook, then crossed into Virginia over the Potomac River. From there, it passed through Virginia from Harpers Ferry to a point just west of the junction of Patterson Creek and the North Branch Potomac River before crossing back into Maryland to reach Cumberland. From there, it was extended to the Ohio River at Wheeling and eventually to Parkersburg, West Virginia.",
+   "claims": [
+    {
+     "claim": "Based on passage 3, the original line of the Baltimore and Ohio Railroad started from the port of Baltimore and went west to Sandy Hook, then crossed into Virginia over the Potomac River.",
+     "raw": 0.288303492511934,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.00014532680506817997,
+     "novel_words": 0.2857142984867096,
+     "evidence": "Baltimore and Ohio Railroad: The Baltimore and Ohio Railroad is the oldest railroad in the United States and the first common carrier railroad."
+    },
+    {
+     "claim": "From there, it passed through Virginia from Harpers Ferry to a point just west of the junction of Patterson Creek and the North Branch Potomac River before crossing back into Maryland to reach Cumberland.",
+     "raw": 0.0862942772207355,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9809911847114563,
+     "novel_words": 0.08695652335882187,
+     "evidence": "From there it passed through Virginia from Harpers Ferry to a point just west of the junction of Patterson Creek and the North Branch Potomac River where it crossed back into Maryland to reach Cumberland."
+    },
+    {
+     "claim": "From there, it was extended to the Ohio River at Wheeling and eventually to Parkersburg, West Virginia.",
+     "raw": 0.07763798989664543,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9962267875671387,
+     "novel_words": 0.1111111119389534,
+     "evidence": "From there it was extended to the Ohio River at Wheeling and a few years later also to Parkersburg, West Virginia."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 7484.051704406738,
+   "check_ms": 456.58349990844727
+  },
+  {
+   "id": "5adf1b8a5542995534e8c750",
+   "question": "What band did Gator Country guitarist that co-wrote Bloody Reunion come from?",
+   "gold": "Molly Hatchet",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Duane Roland",
+    "Gator Country"
+   ],
+   "retrieved": [
+    "Gator Country",
+    "Duane Roland",
+    "Suicidal Tendencies"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on passage 2, Duane Roland, the guitarist who co-wrote \"Bloody Reunion,\" came from the Southern rock band Molly Hatchet.",
+   "claims": [
+    {
+     "claim": "Based on passage 2, Duane Roland, the guitarist who co-wrote \"Bloody Reunion,\" came from the Southern rock band Molly Hatchet.",
+     "raw": 0.18058020204329903,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.008374723605811596,
+     "novel_words": 0.3125,
+     "evidence": "After leaving the band he played with the Southern Rock Allstars and Gator Country, which included many of the founding members of Molly Hatchet."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2526.843309402466,
+   "check_ms": 358.49833488464355
+  },
+  {
+   "id": "5a87081755429960ec39b6fe",
+   "question": "Jessica Jones is a television series created for Netflix, the second in the series of the shows that lead to \"The Defenders\" miniseries after what show released on Netflix earlier?",
+   "gold": "Daredevil",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Jessica Jones (TV series)",
+    "The Defenders (miniseries)"
+   ],
+   "retrieved": [
+    "Jessica Jones (TV series)",
+    "The Defenders (miniseries)",
+    "List of Jessica Jones characters"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2061951885992243,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.0020712153054773808,
+     "novel_words": 0.800000011920929,
+     "evidence": "Jessica Jones (TV series): Marvel's Jessica Jones, or simply Jessica Jones, is an American web television series created for Netflix by Melissa Rosenberg, based on the Marvel Comics character of the same name."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 781.1803817749023,
+   "check_ms": 280.3192138671875
+  },
+  {
+   "id": "5ab322b1554299194fa93570",
+   "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+   "gold": "fictional character",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Mary Poppins (character)",
+    "Mary Poppins Opens the Door"
+   ],
+   "retrieved": [
+    "Mary Poppins (character)",
+    "P. L. Travers",
+    "Mary Poppins Opens the Door"
+   ],
+   "gold_retrieved": 2,
+   "answer": "The type of character featured by the P. L. Travers's third book and last novel in the \"Mary Poppins\" series is a magical English nanny named Mary Poppins.",
+   "claims": [
+    {
+     "claim": "The type of character featured by the P. L. Travers's third book and last novel in the \"Mary Poppins\" series is a magical English nanny named Mary Poppins.",
+     "raw": 0.030790879571782667,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9991843104362488,
+     "novel_words": 0.1666666716337204,
+     "evidence": "Mary Poppins Opens the Door: Mary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 2887.2368335723877,
+   "check_ms": 225.09241104125977
+  },
+  {
+   "id": "5a80721b554299485f5985ef",
+   "question": "The Livesey Hal War Memorial commemorates the fallen of which war, that had over 60 million casualties?",
+   "gold": "World War II",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Livesey Hall War Memorial",
+    "World War II casualties"
+   ],
+   "retrieved": [
+    "Livesey Hall War Memorial",
+    "Attack on Pearl Harbor in popular culture",
+    "Rainham War Memorial"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Based on passage 3, the Livesey Hal War Memorial commemorates the fallen of both World War I and World War II.",
+   "claims": [
+    {
+     "claim": "Based on passage 3, the Livesey Hal War Memorial commemorates the fallen of both World War I and World War II.",
+     "raw": 0.2826024586281319,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.004370382986962795,
+     "novel_words": 0.3076923191547394,
+     "evidence": "Livesey Hall War Memorial: The Livesey Hall War Memorial commemorates the fallen of World War I and World War II who had been employed by the South Suburban Gas Company of London."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 1969.158411026001,
+   "check_ms": 211.44509315490723
+  },
+  {
+   "id": "5a85fb085542994775f606de",
+   "question": "What is the name of the executive producer of the film that has a score composed by Jerry Goldsmith?",
+   "gold": "Ronald Shusett",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Alien (film)",
+    "Alien (soundtrack)"
+   ],
+   "retrieved": [
+    "Legend (film score)",
+    "Alien (soundtrack)",
+    "Hans Zimmer"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2981618920627253,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.002074665389955044,
+     "novel_words": 1.0,
+     "evidence": "The album was released on compact disc in 1992 through Silva Screen records and featured alternate cover art and additional songs."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 767.1597003936768,
+   "check_ms": 221.48585319519043
+  },
+  {
+   "id": "5a79c1335542994bb9457066",
+   "question": "Eric Ambler and Carol Shields are both best Known for what profession?",
+   "gold": "author",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Carol Shields",
+    "Eric Ambler"
+   ],
+   "retrieved": [
+    "Eric Ambler",
+    "Carol Shields",
+    "Helen Hunt"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Eric Ambler is best known for his profession as a thriller author, particularly in the field of spy novels. Carol Shields is best known for her profession as a novelist and short story writer, specifically for her 1993 novel \"The Stone Diaries.\"",
+   "claims": [
+    {
+     "claim": "Eric Ambler is best known for his profession as a thriller author, particularly in the field of spy novels.",
+     "raw": 0.11009759201324087,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9709992408752441,
+     "novel_words": 0.4166666567325592,
+     "evidence": "Eric Ambler: Eric Clifford Ambler OBE (28 June 1909 – 22 October 1998) was an influential British author of thrillers, in particular spy novels, who introduced a new realism to the genre."
+    },
+    {
+     "claim": "Carol Shields is best known for her profession as a novelist and short story writer, specifically for her 1993 novel \"The Stone Diaries.\"",
+     "raw": 0.10629111341885135,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.707893967628479,
+     "novel_words": 0.13333334028720856,
+     "evidence": "She is best known for her 1993 novel \"The Stone Diaries\", which won the U.S. Pulitzer Prize for Fiction as well as the Governor General's Award in Canada."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 3909.278392791748,
+   "check_ms": 303.800106048584
+  },
+  {
+   "id": "5a774e9c55429972597f14f3",
+   "question": "David Huntsinger has worked with this gospel singer born in the month of July?",
+   "gold": "Larnelle Harris",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "David Huntsinger",
+    "Larnelle Harris"
+   ],
+   "retrieved": [
+    "Latice Crawford",
+    "Mariah Carey",
+    "Andraé Crouch"
+   ],
+   "gold_retrieved": 0,
+   "answer": "Based on the provided passages, David Huntsinger has worked with Bear Hunt, who is a gospel singer born in July.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, David Huntsinger has worked with Bear Hunt, who is a gospel singer born in July.",
+     "raw": 0.6178044861375199,
+     "p": 0.11653116531165311,
+     "action": "show",
+     "support": 0.01846242882311344,
+     "novel_words": 0.6666666865348816,
+     "evidence": "Mariah Carey: Mariah Carey (born March 27, 1969 or 1970) is an American singer, songwriter, record producer, and actress."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 1972.2967147827148,
+   "check_ms": 380.9664249420166
+  },
+  {
+   "id": "5adcdea85542992c1e3a2441",
+   "question": "What film adaptation do both Jerome Bernard and Ira Lewis have in common?",
+   "gold": "Chinese Coffee",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Ira Lewis",
+    "Jerry Orbach"
+   ],
+   "retrieved": [
+    "Ira Lewis",
+    "Arthur Penn",
+    "Arthur Newman (film)"
+   ],
+   "gold_retrieved": 1,
+   "answer": "Unable to answer based on given passages.",
+   "claims": [
+    {
+     "claim": "Unable to answer based on given passages.",
+     "raw": 0.2997121220105155,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.0011930870823562145,
+     "novel_words": 1.0,
+     "evidence": "The film was released theatrically in the United States on April 26, 2013."
+    }
+   ],
+   "outcome": "refused",
+   "generate_ms": 726.7000675201416,
+   "check_ms": 242.38324165344238
+  },
+  {
+   "id": "5ac509e95542994611c8b333",
+   "question": "The chicken is a type of dance pattern that is a change of pace of what dance?",
+   "gold": "the Twist",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Chicken (dance)",
+    "Dance move"
+   ],
+   "retrieved": [
+    "Chicken (dance)",
+    "Frug (dance)",
+    "Dance move"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, the chicken dance is a type of rhythm and blues dance that features lateral body movements. It serves as a change of pace step during the twist dance.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the chicken dance is a type of rhythm and blues dance that features lateral body movements.",
+     "raw": 0.12046810165884078,
+     "p": 0.015444015444015444,
+     "action": "show",
+     "support": 0.9080878496170044,
+     "novel_words": 0.4166666567325592,
+     "evidence": "Chicken (dance): The Chicken is a popular rhythm and blues dance started in America in the 1950s, in which the dancers flapped their arms and kicked back their feet in an imitation of a chicken."
+    },
+    {
+     "claim": "It serves as a change of pace step during the twist dance.",
+     "raw": 0.061290550348337275,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9968532919883728,
+     "novel_words": 0.2857142984867096,
+     "evidence": "It was used primarily as a change of pace step while doing the Twist."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 2705.7220935821533,
+   "check_ms": 322.8774070739746
+  },
+  {
+   "id": "5a8b42be55429949d91db515",
+   "question": "What profession does John Lanchester and Alan Dean Foster have in common?",
+   "gold": "novelist",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Alan Dean Foster",
+    "John Lanchester"
+   ],
+   "retrieved": [
+    "Alan Dean Foster",
+    "John Lanchester",
+    "Norman Foster (director)"
+   ],
+   "gold_retrieved": 2,
+   "answer": "John Lanchester and Alan Dean Foster both have professions related to writing. John Lanchester is a British journalist and novelist, while Alan Dean Foster is an American writer of fantasy and science fiction, known for creating and contributing to various book series.",
+   "claims": [
+    {
+     "claim": "John Lanchester and Alan Dean Foster both have professions related to writing.",
+     "raw": 0.03853582541901974,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9976816773414612,
+     "novel_words": 0.4444444477558136,
+     "evidence": "Alan Dean Foster: Alan Dean Foster (born November 18, 1946) is an American writer of fantasy and science fiction, a prolific creator of and contributor to book series as well as the author of more than 20 standalone novels."
+    },
+    {
+     "claim": "John Lanchester is a British journalist and novelist, while Alan Dean Foster is an American writer of fantasy and science fiction, known for creating and contributing to various book series.",
+     "raw": 0.30040537035972265,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.23441369831562042,
+     "novel_words": 0.25,
+     "evidence": "Alan Dean Foster: Alan Dean Foster (born November 18, 1946) is an American writer of fantasy and science fiction, a prolific creator of and contributor to book series as well as the author of more than 20 standalone novels."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 3805.6640625,
+   "check_ms": 246.36077880859375
+  },
+  {
+   "id": "5ab9b2c7554299743d22ebaf",
+   "question": "Are both Lygodium or Maxillaria a genus of orchids?",
+   "gold": "no",
+   "type": "comparison",
+   "level": "hard",
+   "gold_titles": [
+    "Lygodium",
+    "Maxillaria"
+   ],
+   "retrieved": [
+    "Maxillaria",
+    "Maxillarieae",
+    "Lygodium"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, neither Lygodium nor Maxillaria is a genus of orchids. The passage for Lygodium describes it as a genus of ferns, while the passage for Maxillaria mentions it as part of an orchid tribe within the larger Maxillarieae group. Therefore, the correct answer is:\n\nLygodium is not a genus of orchids, but Maxillaria is.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, neither Lygodium nor Maxillaria is a genus of orchids.",
+     "raw": 0.1081043404359348,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.9936156868934631,
+     "novel_words": 0.5555555820465088,
+     "evidence": "Lygodium: Lygodium (climbing fern) is a genus of about 40 species of ferns, native to tropical regions across the world, with a few temperate species in eastern Asia and eastern North America."
+    },
+    {
+     "claim": "The passage for Lygodium describes it as a genus of ferns, while the passage for Maxillaria mentions it as part of an orchid tribe within the larger Maxillarieae group.",
+     "raw": 0.37748345111017867,
+     "p": 0.0562429696287964,
+     "action": "show",
+     "support": 0.6067389249801636,
+     "novel_words": 0.5333333611488342,
+     "evidence": "Lygodium: Lygodium (climbing fern) is a genus of about 40 species of ferns, native to tropical regions across the world, with a few temperate species in eastern Asia and eastern North America."
+    },
+    {
+     "claim": "Therefore, the correct answer is: Lygodium is not a genus of orchids, but Maxillaria is.",
+     "raw": 0.4653131198395617,
+     "p": 0.09542743538767395,
+     "action": "show",
+     "support": 0.016921259462833405,
+     "novel_words": 0.5,
+     "evidence": "Lygodium: Lygodium (climbing fern) is a genus of about 40 species of ferns, native to tropical regions across the world, with a few temperate species in eastern Asia and eastern North America."
+    }
+   ],
+   "outcome": "wrong",
+   "generate_ms": 6259.8912715911865,
+   "check_ms": 307.5687885284424
+  },
+  {
+   "id": "5a7b63eb55429931da12ca7e",
+   "question": "What city does Paul Clyne and David Soares have in common?",
+   "gold": "New York",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "David Soares",
+    "Paul Clyne"
+   ],
+   "retrieved": [
+    "Paul Clyne",
+    "David Soares",
+    "Bruno Soares"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Paul Clyne and David Soares both hold positions related to law enforcement or legal matters. Paul Clyne served as the District Attorney of Albany County, New York, while David Soares is currently serving as the Albany County, N.Y. District Attorney.",
+   "claims": [
+    {
+     "claim": "Paul Clyne and David Soares both hold positions related to law enforcement or legal matters.",
+     "raw": 0.07964138221226262,
+     "p": 0.01293103448275862,
+     "action": "show",
+     "support": 0.99325031042099,
+     "novel_words": 0.5833333134651184,
+     "evidence": "David Soares: P. David Soares (born October 26, 1969, Brava, Cape Verde) is the Albany County, N.Y. District Attorney."
+    },
+    {
+     "claim": "Paul Clyne served as the District Attorney of Albany County, New York, while David Soares is currently serving as the Albany County, N.Y. District Attorney.",
+     "raw": 0.16232911191974594,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.7921286225318909,
+     "novel_words": 0.25,
+     "evidence": "He was defeated for re-election by David Soares, first in the Democratic Party primary election in September 2004, and then in the general election in November 2004, in which he ran on an independent line."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 3834.486246109009,
+   "check_ms": 397.02725410461426
+  },
+  {
+   "id": "5a7ea14655429930675135ab",
+   "question": "What giant silverware company was started as a religious Utopian group and was for many years run by Pierrepont Noyes?",
+   "gold": "Oneida Limited",
+   "type": "bridge",
+   "level": "hard",
+   "gold_titles": [
+    "Oneida Community",
+    "Pierrepont Noyes"
+   ],
+   "retrieved": [
+    "Pierrepont Noyes",
+    "Oneida Community Mansion House",
+    "Oneida Community"
+   ],
+   "gold_retrieved": 2,
+   "answer": "Based on the provided passages, the giant silverware company started as a religious Utopian group and was run by Pierrepont Noyes. This company was the Oneida Community, which was founded by John Humphrey Noyes in 1848 and dissolved in 1881, becoming the giant silverware company Oneida Limited.",
+   "claims": [
+    {
+     "claim": "Based on the provided passages, the giant silverware company started as a religious Utopian group and was run by Pierrepont Noyes.",
+     "raw": 0.18400254991150355,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.001252475194633007,
+     "novel_words": 0.3076923191547394,
+     "evidence": "The Oneida Community dissolved in 1881, and eventually became the giant silverware company Oneida Limited."
+    },
+    {
+     "claim": "This company was the Oneida Community, which was founded by John Humphrey Noyes in 1848 and dissolved in 1881, becoming the giant silverware company Oneida Limited.",
+     "raw": 0.20895865237137878,
+     "p": 0.032490974729241874,
+     "action": "show",
+     "support": 0.006834174040704966,
+     "novel_words": 0.0714285746216774,
+     "evidence": "The Oneida Community dissolved in 1881, and eventually became the giant silverware company Oneida Limited."
+    }
+   ],
+   "outcome": "correct",
+   "generate_ms": 5299.829483032227,
+   "check_ms": 390.1402950286865
+  }
+ ]
+}

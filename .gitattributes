@@ -1,13 +1,8 @@
 # Normalise line endings so Windows and Linux checkouts do not fight.
 * text=auto eol=lf
 
-# Binary deliverables: never touch these.
-*.pdf   binary
-*.docx  binary
-*.pptx  binary
 *.parquet binary
 *.npz   binary
 *.png   binary
 
-# Notebooks are JSON; keep diffs readable but do not mangle them.
 *.ipynb text eol=lf

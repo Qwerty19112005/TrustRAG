@@ -1,0 +1,776 @@
+[
+ {
+  "id": "a01",
+  "order": 1,
+  "response_id": "16420",
+  "question": "how to draw a truncated cone in geogebra",
+  "passage": "Page 1 of 2 Compliments of: Bob Bartelme Backwoods Tin & Copper, LLC Creating a Pattern to make a Cone (Frustum of a Cone) Step By Step Instructions Step Visual Aid 1. Draw the shape you want to make. Example: A cone with a 6” diameter base, a height of 5 inches and a top diameter of 3.50 inches.\n\nThe truncated cone is a lot like a lampshade. I've drawn one below with some helping lines labelled t, b, h and w : So t is the diameter of the circular top of the cone, b is the diameter of the circular bottom, h is the height of the cone and w is the diagonal width. You have measurements for all these except w.\n\nThe diameter of the base will be 2 inches and the diameter of the top will be .25 inches. The height will be 7 inches. As before, think about extending the conical figure up to a point and put it Paula's numbers. That is, this pedestal is formed by cutting off a cone with a base having a diameter of .25 inches.",
+  "claims": [
+   {
+    "id": "16420_0",
+    "text": "Based on the given passages, here are the steps to draw a truncated cone in GeoGebra: 1.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "16420_1",
+    "text": "Draw a circle with a diameter of 2 inches as the base of the truncated cone.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "16420_2",
+    "text": "2. Draw a line from the center of the base to the top of the circle, making sure the line is perpendicular to the base.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "16420_3",
+    "text": "This line will serve as the axis of symmetry for the cone.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "16420_4",
+    "text": "3. Use the measure tool to measure the height of the cone, which is given as 7 inches in passage 3. 4.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "16420_5",
+    "text": "Draw a second circle with a diameter of .25 inches at the top of the first circle, using the axis of symmetry as a reference point.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "16420_6",
+    "text": "This will create the truncated top of the cone.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "16420_7",
+    "text": "5. Use the extend command to extend the conical surface up to the top of the second circle, making sure to keep the angle of the cone consistent throughout.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "16420_8",
+    "text": "Here's an example of how the truncated cone might look in GeoGebra: Note that the exact dimensions of the cone can be adjusted based on the measurements provided in the passages.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   }
+  ]
+ },
+ {
+  "id": "a02",
+  "order": 2,
+  "response_id": "13156",
+  "question": "psychological effects of hugging",
+  "passage": "The physiological benefits of hugging. Hugs make you feel good for a reason and it's not just the loving embrace that gives us that warm feeling in our hearts. It's much more. It affects the entire body to such an extent that many scientists claim it is equivalent to the effect of many different drugs operating on the body simultaneously.\n\nEmpathy and Listening Skills. and. Psychological Hugs. The use of empathy and listening skills--empathic listening--sometimes leads to good relationships, emotional intimacy, and happy marriages. Their use may also lead to a conversation partner feeling like she or he is receiving a hug--a psychological hug..\n\nIn a study on fears and self-esteem, research published in the journal Psychological Science revealed that hugs and touch significantly reduce worry of mortality. The studies found that hugging -- even if it was just an inanimate object like a teddy bear -- helps soothe individuals' existential fears.",
+  "claims": [
+   {
+    "id": "13156_0",
+    "text": "Based on the given passages, here are the psychological effects of hugging: 1.",
+    "ragtruth_label": 0,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "13156_1",
+    "text": "Reduces stress and anxiety:",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "13156_2",
+    "text": "Hugging releases oxytocin, which can lower blood pressure and heart rate, and reduce stress and anxiety (Passage 1).",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "13156_3",
+    "text": "2. Improves mood and well-being: Hugs can boost feelings of happiness and social connection, leading to improved overall mood and well-being (Passage 1).",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "13156_4",
+    "text": "3. Enhances empathy and listening skills: Physical touch, such as hugging, can increase empathy and improve listening skills, leading to better relationships and emotional intimacy (Passage 2).",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "13156_5",
+    "text": "4. Soothes existential fears: Hugging can help alleviate fears of mortality and provide a sense of comfort and security (Passage 3).",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "13156_6",
+    "text": "Therefore, hugging has several positive psychological effects, including reducing stress and anxiety, improving mood and well-being, enhancing empathy and listening skills, and soothing existential fears.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   }
+  ]
+ },
+ {
+  "id": "a03",
+  "order": 3,
+  "response_id": "15905",
+  "question": "what is a transistor how does it work",
+  "passage": "The design of a transistor allows it to function as an amplifier or a switch. This is accomplished by using a small amount of electricity to control a gate on a much larger supply of electricity, much like turning a valve to control a supply of water.he base pulls these electrons from the emitter because it has a more positive voltage than does the emitter. This movement of electrons creates a flow of electricity through the transistor. The current passes from the emitter to the collector through the base.\n\nA transistor is a miniature electronic component that can do two different jobs. It can work either as an amplifier or a switch: 1  When it works as an amplifier, it takes in a tiny electric current at one end (an input current) and produces a much bigger electric current (an output current) at the other.2  Transistors can also work as switches.ormally, the holes in the base act like a barrier, preventing any significant current flow from the emitter to the collector while the transistor is in its off state. A transistor works when the electrons and the holes start moving across the two junctions between the n-type and p-type silicon.\n\nA transistor is a semiconductor device used to amplify and switch electronic signals and electrical power.It is composed of semiconductor material with at least three terminals for connection to an external circuit.ollector current is approximately β (common-emitter current gain) times the base current. It is typically greater than 100 for small-signal transistors but can be smaller in transistors designed for high-power applications. Unlike the field-effect transistor (see below), the BJT is a low–input-impedance device.",
+  "claims": [
+   {
+    "id": "15905_0",
+    "text": "Sure, I'll do my best to help you!",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15905_1",
+    "text": "Here's a brief answer to your question based on the given passages:",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15905_2",
+    "text": "A transistor is a semiconductor device that can function as an amplifier or a switch.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15905_3",
+    "text": "It consists of three layers of a semiconductor material with different electrical properties, known as the base, collector, and emitter.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15905_4",
+    "text": "The base is connected to a voltage source, and the collector and emitter are connected to the input and output circuits, respectively.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15905_5",
+    "text": "When a small voltage is applied to the base, it controls the flow of current between the collector and emitter, allowing the transistor to act as an amplifier or a switch.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15905_6",
+    "text": "The transistor can amplify a weak signal by multiplying it with a factor called beta (β), which is typically greater than 100 for small-signal transistors.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15905_7",
+    "text": "I hope that helps!",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15905_8",
+    "text": "Let me know if you have any further questions.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   }
+  ]
+ },
+ {
+  "id": "a04",
+  "order": 4,
+  "response_id": "12260",
+  "question": "set default browser to windows",
+  "passage": "How To: Set the Default Web Browser in Windows 7. CMU Help Desk: 970-248-2111 or http://whd.coloradomesa.edu Page 1. This document explains how to set the default web browser in Windows 7. Once set, any hyperlink that is selected. will cause the default browser to open and the address of the link will be retrieved. Decide which browser you. want to be your default and perform the respective steps below for the chosen browser.\n\nMethod 1 of 2. Step 1: Open Settings app. To do so, open Start menu and then click Settings icon. Alternatively, you can use Windows + I keyboard shortcut to quickly open Settings app. Step 2: Click the first option titled System (display, notifications, apps, power). Step 3: In the left-pane, click Default apps. Step 4: Now, on the right-side, scroll down the page to see Web browser section. Step 5: Click on the Edge browser entry (or any browser other than Chrome) to reveal Choose an app, and then click Google Chrome to set it as default browser.\n\nTo set Mozilla Firefox as your default Windows browser, take the following steps. 1  Open your Firefox browser. 2  Click on the Firefox menu button, represented by three horizontal lines and located in the upper right hand corner of the browser window. 3  When the pop-out menu appears, select Options.",
+  "claims": [
+   {
+    "id": "12260_0",
+    "text": "To set Mozilla Firefox as your default Windows browser, follow these steps: 1.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12260_1",
+    "text": "Open your Firefox browser.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12260_2",
+    "text": "2. Click on the Firefox menu button, represented by three horizontal lines and located in the upper right hand corner of the browser window.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12260_3",
+    "text": "3.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12260_4",
+    "text": "When the pop-out menu appears, select Options.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12260_5",
+    "text": "4. Click on the Application tab.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "12260_6",
+    "text": "5. Scroll down to the Default browser section.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "12260_7",
+    "text": "6. Select Firefox from the list of installed browsers.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "12260_8",
+    "text": "7. Click the Set as default button.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   }
+  ]
+ },
+ {
+  "id": "a05",
+  "order": 5,
+  "response_id": "12297",
+  "question": "what is the proper way to dispose of a worn usa flag",
+  "passage": "Disposal of a faded or worn American flag is to be done in one of three ways. You can, if necessary, put the flag out for collection only after you have removed the blue field from the flag. The blue field is to be burned in a peaceful manner and the ashes buried.\n\n“This Flag has served its nation long and well. It has worn to a condition to which it should no longer be used to represent the nation. This Flag represents all of the Flags collected and being retired from service today. We honor them all as we salute one Flag.”.\n\nThe other method is to burn the flag yourself in a proper ceremony. If you are able to personally discharge your worn flag from service the ceremony that follows is the proper way. The flag must be folded in the customary triangle fold.",
+  "claims": [
+   {
+    "id": "12297_0",
+    "text": "Based on the provided passages, the proper way to dispose of a worn USA flag is as follows: 1.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12297_1",
+    "text": "Remove the blue field from the flag and then place the flag out for collection.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12297_2",
+    "text": "The blue field should be burned in a peaceful manner and the ashes buried.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12297_3",
+    "text": "(Passage 1) 2.",
+    "ragtruth_label": 0,
+    "label_types": "Evident Conflict"
+   },
+   {
+    "id": "12297_4",
+    "text": "Burn the flag in a proper ceremony.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Conflict"
+   },
+   {
+    "id": "12297_5",
+    "text": "If you are able to personally discharge your worn flag from service, the ceremony that follows is the proper way.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Conflict"
+   },
+   {
+    "id": "12297_6",
+    "text": "The flag must be folded in the customary triangle fold.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Conflict"
+   },
+   {
+    "id": "12297_7",
+    "text": "(Passage 2)",
+    "ragtruth_label": 1,
+    "label_types": "Evident Conflict"
+   },
+   {
+    "id": "12297_8",
+    "text": "Therefore, the proper way to dispose of a worn USA flag is through burning it in a peaceful manner during a proper ceremony, or by placing it out for collection after removing the blue field and then properly disposing of the blue field through burning.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   }
+  ]
+ },
+ {
+  "id": "a06",
+  "order": 6,
+  "response_id": "15465",
+  "question": "change of address u.s. postal service",
+  "passage": "Change your postal service address in 1 minute or less. Postal Change of Address Features. 1  Fast: Change of US postal address service in as little as 1 minute. 2  Versatile: Notify up to 100 organizations in addition to the Postal Service ™ (USPS  ®) Secure: Latest encryption technologies ensures your data is safe.\n\nWe’ve categorized our forms so you can find what you need quickly and easily. Now you can complete the U.S. Postal Service Official Change of Address form online. Passport instructions, forms, and fee information from the State Department.\n\nYou can use this feature if you need to have your business mail forwarded to a new address as a result of a permanent move or temporary relocation. It is especially important to remember to have your mail forwarded if your business has been subjected to a disaster that requires relocation. There are three ways you can change your address: 1.Visit https://moversguide.usps.com/. Safeguard your personal information with identity validation by a simple $1 charge to your credit or debit card. 2.Call the USPS Call Center at 1-800-ASK-USPS (1-800-275-8777). 3.Fill out and submit PS Form 3575, which you can pick up at any U.S. Post Office, and submit it at the Post Office. The form may be submitted at any U.S. Post Office, mailed to any Post Office, or provided to any Postal Mail Carrier.",
+  "claims": [
+   {
+    "id": "15465_0",
+    "text": "Sure!",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15465_1",
+    "text": "Here's my attempt to briefly answer your question based on the provided passages: To change your address with the United States Postal Service (USPS), you can follow these steps: 1.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15465_2",
+    "text": "Visit the USPS website (<https://www.usps.com/>) and click on the \"Change of Address\" tab.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "15465_3",
+    "text": "2. Fill out the online form with your old and new address details, and select the type of mail you want to forward (residential, commercial, or military).",
+    "ragtruth_label": 1,
+    "label_types": "Subtle Baseless Info"
+   },
+   {
+    "id": "15465_4",
+    "text": "3. Pay a $1 validation fee using a credit or debit card to validate your identity.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15465_5",
+    "text": "4.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15465_6",
+    "text": "Submit the form and wait for the USPS to process your request.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15465_7",
+    "text": "Alternatively, you can call the USPS Customer Service number at 1-800-ASK-USPS (1-800-275-8777) or visit any U.S. Post Office to fill out and submit PS Form 3575, which is available for download from the USPS website.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15465_8",
+    "text": "Note: If you need to change your address for a business, you will need to provide additional documentation, such as proof of ownership or authorization, to verify your identity.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   }
+  ]
+ },
+ {
+  "id": "a07",
+  "order": 7,
+  "response_id": "14860",
+  "question": "how do i breed a shugabeats in my singing monsters",
+  "passage": "So ask your My Singing Monsters question for iPhone-iPod and get answers from real gamers or answer questions and share your insights and experience with the rest of the gaming community.nswer from: Guest. You need to breed a Maw with a Potbelly... There are other combinations also.. As mentioned by precious poster, you need to combine correct elements in order to breed your desired monster (in this instance, you need Water, Snow & Leaf to get Bowgart).\n\nMy Singing Monsters: Shugabeats Monster breeding guide. You must obtain the Shugabush Monster from the other island. Doing this will turn your Shugabush Monsters into an egg then you will need to hatch them and then buy the breeding structure then breed them using the combination below.o breed the Shugabeats, you need to use the Shugabush and the Furcorn in the Shugabush Island breeding structure to get this monster. BREEDING NOTES: Keep in mind that breeding the monsters left or right does not matter.\n\nGeneration 2 My Singing Monsters Combo Breeding. Generation 2 monsters can be created by breeding two Generation 1 monsters or combination of a basic and a Generation 1 monster. Either breeding method is not 100% guarantee.Simply keep on trying if you fail to get the breed that you are looking for.thereal My Singing Monsters Breed Combo. Ethereal monsters and island are special additions to the game on My Singing Monsters’ 1 year anniversary. Ethereal monsters possess special elements: Plasma, Mech, Shadow, Crystal, and Poison. Basic Ethereal monsters are consider very rare.",
+  "claims": [
+   {
+    "id": "14860_0",
+    "text": "Based on the given passages, here's how you can breed a Shugabeats in My Singing Monsters: To breed a Shugabeats, you need to use the Shugabush and the Furcorn in the Shugabush Island breeding structure.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14860_1",
+    "text": "Specifically, you need to combine the Shugabush and Furcorn in the breeding structure to get this monster.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14860_2",
+    "text": "As mentioned in passage 2, breeding the monsters left or right does not matter.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14860_3",
+    "text": "However, it's important to note that breeding is not a guaranteed process, and you may need to try multiple times to successfully breed the Shugabeats.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "14860_4",
+    "text": "Additionally, it's worth mentioning that the Shugabeats is a Generation 2 monster, so you will need to have both a Generation 1 monster and another monster of any level to create it.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14860_5",
+    "text": "If you don't have a Generation 1 monster, you can use a basic monster and a Generation 1 monster to create a Generation 2 monster.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14860_6",
+    "text": "Finally, it's important to note that the breeding process can be affected by the elements of the monsters being bred.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "14860_7",
+    "text": "For example, the Shugabeats possesses the Water element, so breeding it with a monster that has the Water element will increase the chances of getting a Shugabeats as an offspring.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   }
+  ]
+ },
+ {
+  "id": "a08",
+  "order": 8,
+  "response_id": "12335",
+  "question": "how to tell if your male coworker is flirting with you",
+  "passage": "1 Avoid physical contact that eludes to sexual activity or can be misconstrued as fondling. 2  If the guy you're flirting with seems uncomfortable or suggests that you not continue flirting with him, do so. 3  You don't want to risk losing your job flirting with him, especially when he's not interested. Avoid physical contact that eludes to sexual activity or can be misconstrued as fondling. 2  If the guy you're flirting with seems uncomfortable or suggests that you not continue flirting with him, do so. 3  You don't want to risk losing your job flirting with him, especially when he's not interested.\n\n1 If it always seems your co-worker is staring at you when you see her, that’s a sign. 2  You can usually tell when someone likes you if you catch her staring at you all the time. 3  Use it as an opportunity if you want to go out with her. 4  Your co-worker is flirting with you if her finds any reason to touch you. If she didn’t like you, she probably wouldn’t do this since it is a little obnoxious. 2  Smiling is one of the signs a co-worker is flirting with you. 3  If you notice a co-worker always smiles at you at work when there is no good reason for it, she may like you. 4  You can find out by asking her out if you like her.\n\n1 Finding reasons to be near you. 2  If she, or he, is constantly at your desk and seeking you out discreetly, it’s a guarantee that the person likes you. 3  Finding any reason to have contact with you is an obvious sign of affection or admiration. 4  Hinged on your every word.o here are some ways to find out. 1  Finding reasons to be near you. 2  If she, or he, is constantly at your desk and seeking you out discreetly, it’s a guarantee that the person likes you. 3  Finding any reason to have contact with you is an obvious sign of affection or admiration.",
+  "claims": [
+   {
+    "id": "12335_0",
+    "text": "Based on the given passages, here are some signs that a male coworker may be flirting with you: *",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12335_1",
+    "text": "He finds reasons to be near you and seek you out discreetly (Passage 3) *",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12335_2",
+    "text": "He is always staring at you and catches your eye (Passage 2) *",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12335_3",
+    "text": "He touches you unnecessarily or finds excuses to have physical contact with you (Passage 2) *",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12335_4",
+    "text": "He smiles at you excessively or without apparent reason (Passage 2) *",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12335_5",
+    "text": "He seems uncomfortable or suggests that you not continue flirting with him (Passage 1) If you observe these behaviors from a male coworker, it may be a sign that he is interested in you and flirting with you.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12335_6",
+    "text": "However, it's essential to remember that these signs alone do not necessarily mean the person likes you romantically, and it's possible they just have a friendly interest in you.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12335_7",
+    "text": "To confirm their intentions, consider observing their behavior over time, and if you feel comfortable, try initiating a conversation or asking them out.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   }
+  ]
+ },
+ {
+  "id": "a09",
+  "order": 9,
+  "response_id": "12518",
+  "question": "how the body systems work together",
+  "passage": "The Systems. Several systems in the human body work together to help keep it functioning normally. These systems are the skeletal, muscular, digestive, respiratory, circulatory, urinary, endocrine, lymphatic, immune, reproductive and the nervous.\n\nThe urinary system also works closely with all other systems of the body. It is used to clean blood from the body. This system cleans waste products from the skeletal, muscular, digestive, respiratory, circulatory and nervous systems. The system includes the kidneys and lower intestines.\n\nThe respiratory system also works closely with all other systems of the body. The respiratory system provides oxygen for all body parts. It also removes carbon dioxide from the muscular, digestive, skeletal, circulatory, urinary and nervous systems. This system includes the nose, larynx, trachea and the lungs.",
+  "claims": [
+   {
+    "id": "12518_0",
+    "text": "Based on the given passages, we can see that the various body systems work together to perform their respective functions.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12518_1",
+    "text": "For example, the digestive system breaks down food into smaller molecules that can be absorbed by the body, while the circulatory system transports nutrients and oxygen throughout the body.",
+    "ragtruth_label": 1,
+    "label_types": "Subtle Baseless Info"
+   },
+   {
+    "id": "12518_2",
+    "text": "Similarly, the nervous system controls and coordinates the activities of all other systems in the body.",
+    "ragtruth_label": 1,
+    "label_types": "Subtle Baseless Info"
+   },
+   {
+    "id": "12518_3",
+    "text": "Overall, these systems work together to maintain homeostasis and ensure the proper functioning of the body as a whole.",
+    "ragtruth_label": 1,
+    "label_types": "Subtle Baseless Info"
+   }
+  ]
+ },
+ {
+  "id": "a10",
+  "order": 10,
+  "response_id": "14764",
+  "question": "what is the normal b natriuretic peptide",
+  "passage": "A brain natriuretic peptide (BNP) test measures the amount of the BNP hormone in the blood. BNP values tend to increase with age and are higher in women than men.The normal values listed here-called a reference range-are just a guide. brain natriuretic peptide (BNP) test measures the amount of the BNP hormone in the blood. BNP values tend to increase with age and are higher in women than men.\n\nThe B-type Natriuretic Peptide (BNP) Test is a blood test for heart failure. It measures the level of B-type natriuretic peptide in your blood. Your heart 's ventricles produce extra B-type natriuretic peptide when they can't pump enough blood to meet your body's needs.So if your B-type natriuretic peptide level is high, you probably have heart failure.The higher the levels are at diagnosis, the worse your heart failure is likely to be. The finding of low levels tends to exclude heart failure.o if your B-type natriuretic peptide level is high, you probably have heart failure. The higher the levels are at diagnosis, the worse your heart failure is likely to be. The finding of low levels tends to exclude heart failure.\n\nTest Overview. A brain natriuretic peptide (BNP) test measures the amount of the BNP hormone in your blood. BNP is made by your heart and shows how well your heart is working. Normally, only a low amount of BNP is found in your blood.hy It Is Done. The brain natriuretic peptide (BNP) test is used to: 1  Check for heart failure. 2  A doctor may think you have heart failure if you are having problems such as trouble breathing and swelling (edema) in the arms or legs.",
+  "claims": [
+   {
+    "id": "14764_0",
+    "text": "Based on the provided passages, the normal value of B-type natriuretic peptide (BNP) in the blood is not explicitly mentioned.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14764_1",
+    "text": "However, passage 2 states that high levels of BNP indicate heart failure, while low levels tend to exclude heart failure.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14764_2",
+    "text": "Therefore, the normal range for BNP is likely the range below which the likelihood of heart failure decreases.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "14764_3",
+    "text": "Passage 3 lists the purpose of the BNP test as checking for heart failure, suggesting that any deviation from normal BNP levels could indicate an issue with the heart.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14764_4",
+    "text": "Given this context, it can be inferred that a normal BNP level would be within the range that is typical for a healthy individual and does not indicate heart failure.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "14764_5",
+    "text": "Therefore, answering the question based on the given passages, a normal BNP level is: Within the normal range typical for a healthy individual, and does not indicate heart failure.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "14764_6",
+    "text": "However, please note that this answer is based on the limited information provided in the passages, and further clarification or additional information may be required to provide a more accurate answer.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   }
+  ]
+ },
+ {
+  "id": "a11",
+  "order": 11,
+  "response_id": "14470",
+  "question": "what political, economic and social effects have on the united states",
+  "passage": "Children proudly wave the American flag during a children naturalization ceremony in July 2011 at a stadium in Manchester, NH. (Photo courtesy of USCIS). Immigration has shaped the United States as a nation since the first newcomers arrived over 400 years ago.\n\nPrompt: What were the long-term economic, social, and political effects of Reconstruction? The United States was challenged with many issues after the Civil War like crop lien work contracts, segregation, and unresolved problems with the seceded states. This period was called Reconstruction. After the Civil War, African Americans were free but with no place to live in or to work at, they settled with their former ‘masters’. African Americans were technically free, but no one wanted to hire a colored man, so they were put on crop lien work contracts.\n\nThe War also, for the first time, brought economic unity to the US. The South joined the market system, abandoning their former semi-subsistence economy. Industrialization and large economic enterprises clearly had arrived to stay. Politically, important changes had accompanied the maintenance of the national unity.",
+  "claims": [
+   {
+    "id": "14470_0",
+    "text": "Based on the provided passages, here are the answers to the questions about the political, economic, and social effects of the United States: Question 1: What political effects have on the United States?",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14470_1",
+    "text": "Answer: The Reconstruction period after the Civil War brought significant political changes to the United States.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14470_2",
+    "text": "The South joined the market system, and industrialization and large economic enterprises became established, leading to economic unity.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14470_3",
+    "text": "Additionally, politically important changes accompanied the maintenance of national unity.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14470_4",
+    "text": "Question 2: What economic effects have on the United States?",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14470_5",
+    "text": "Answer: The Reconstruction period after the Civil War brought economic unity to the United States, as the South joined the market system and abandoned their former semi-subsistence economy.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14470_6",
+    "text": "Question 3: What social effects have on the United States?",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14470_7",
+    "text": "Answer: The passage does not provide information about specific social effects on the United States.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14470_8",
+    "text": "Note: Based on the provided passages, the answers are limited to the time period after the Civil War, and do not cover the broader history of immigration or other time periods.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   }
+  ]
+ },
+ {
+  "id": "a12",
+  "order": 12,
+  "response_id": "12449",
+  "question": "what is the difference between essential and nonessential amino acids",
+  "passage": "Nine out of the 20 amino acids are essential, but adults only need to obtain eight of them: valine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine and tryptophan.The ninth amino acid -- histidine -- is only essential for infants.ine out of the 20 amino acids are essential, but adults only need to obtain eight of them: valine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine and tryptophan.\n\nDon't think of nonessential amino acids as being unnecessary.. Your body is able to make some amino acids if you don't get them from your diet. Your body creates them from essential amino acids or by breaking down protein products -- thus they are not essential to obtain from your diet.These acids include alanine, asparagine, aspartic acid, glutamic acid, arginine, cysteine, glutamine, glycine, ornithine, proline, serine and tyrosine.our body creates them from essential amino acids or by breaking down protein products -- thus they are not essential to obtain from your diet. These acids include alanine, asparagine, aspartic acid, glutamic acid, arginine, cysteine, glutamine, glycine, ornithine, proline, serine and tyrosine.\n\nAmino acids are the basic building blocks of proteins. Nonessential amino acids can be made by the body, while essential amino acids cannot be made by the body so you must get them from your diet.You must have all of the amino acids so your body can build the wide variety of proteins it needs. Protein is needed for the repair, growth and maintenance of the cells.mino acids are the basic building blocks of proteins. Nonessential amino acids can be made by the body, while essential amino acids cannot be made by the body so you must get them from your diet.",
+  "claims": [
+   {
+    "id": "12449_0",
+    "text": "The main difference between essential and non-essential amino acids is that the human body cannot produce essential amino acids on its own and therefore must obtain them from the diet, whereas non-essential amino acids can either be produced by the body or obtained from the diet.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12449_1",
+    "text": "Essential amino acids are also referred to as \"limiting\" amino acids, meaning that the body cannot synthesize them and thus they must be obtained from outside sources.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "12449_2",
+    "text": "In contrast, non-essential amino acids are considered \"dispensable\" because the body can either synthesize them or obtain them from the diet.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "12449_3",
+    "text": "Essential amino acids are vital for various bodily functions such as protein synthesis, tissue repair, and muscle growth.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info"
+   },
+   {
+    "id": "12449_4",
+    "text": "There are nine essential amino acids that humans need to consume regularly: valine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, and histidine (which is only essential for infants).",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12449_5",
+    "text": "Non-essential amino acids, on the other hand, are still important for various physiological processes, but the body can produce them independently or obtain them from the diet.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "12449_6",
+    "text": "In summary, essential amino acids cannot be produced by the human body and must be obtained from the diet, whereas non-essential amino acids can be synthesized by the body or obtained from the diet.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   }
+  ]
+ },
+ {
+  "id": "a13",
+  "order": 13,
+  "response_id": "14211",
+  "question": "what causes watermelons to explode",
+  "passage": "Place a bunch of rubber bands around the middle of the watermelon. Be careful though as all that pressure from the outsite will start to explode the watermelon. Rubber bands are a great example of potential energy. Potential energy is energy that is stored up, not being used, just waiting to be unleashed.\n\nIt's a bad idea to try to recreate an exploding water melon. It's possible to recreate an explosion with a chemical procedure but this involves volatile gases and liquids. Ask your chemistry or science teacher - they may know how to do it and be willing to recreate the exploding water melon for your class!\n\nThe gas will try its best to escape the water melon but as it slowly increases due to the rotting in the water melon, the pressure will continue to increase. When the skin of the watermelon is no longer strong enough to hold the gas inside, it will explode, often spraying all nearby surfaces with rotten water melon.",
+  "claims": [
+   {
+    "id": "14211_0",
+    "text": "Based on the provided passages, the cause of watermelons to explode is not explicitly stated.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14211_1",
+    "text": "However, it can be inferred that the buildup of gas inside the watermelon, caused by the rotting process, is the primary factor leading to the explosion.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14211_2",
+    "text": "The passage suggests that the pressure inside the watermelon increases as the gas accumulates, eventually causing the skin to burst and releasing the gas in a sudden and forceful manner.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "14211_3",
+    "text": "Therefore, the answer to the question is: Passage 3 mentions that the gas inside the watermelon tries to escape through the skin, but since the skin is not strong enough to hold it, the gas builds up pressure until it explodes.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   }
+  ]
+ },
+ {
+  "id": "a14",
+  "order": 14,
+  "response_id": "15201",
+  "question": "how is a caldera different from a crater",
+  "passage": "Caldera. A large depression made because of volcanic activity is called a caldera. It is the result of a large cavity created underground when a chamber of magma and lava gets emptied. This cavity creates pressure and the over ground rocks collapse to create a large depression.This large depression is called a caldera.rater. A volcanic crater is a bowl like structure at the top of a volcano around the opening that is used for eruption of magma and lava. This is a depression that is the result of sinking in of the rocks because of high pressure. Mostly it has the opening through which lava and ash flows upwards.\n\nA great example is Crater Lake located in Oregon. This is actually a caldera. Photo courtesy of Wikicommons. Photographer: unknown. The main difference between craters and calderas is how they are formed. Craters are caused by impacts from meteorites, and can range in size from very small to several hundred km across.According to the US Geological Survey, a caldera is a large (at least one km across), circular depression formed at the top of a volcano when the magma chamber collapses.hotographer: unknown. The main difference between craters and calderas is how they are formed. Craters are caused by impacts from meteorites, and can range in size from very small to several hundred km across.\n\nCrater. A volcanic crater is a bowl like structure at the top of a volcano around the opening that is used for eruption of magma and lava. This is a depression that is the result of sinking in of the rocks because of high pressure. Mostly it has the opening through which lava and ash flows upwards.rater. A volcanic crater is a bowl like structure at the top of a volcano around the opening that is used for eruption of magma and lava. This is a depression that is the result of sinking in of the rocks because of high pressure. Mostly it has the opening through which lava and ash flows upwards.",
+  "claims": [
+   {
+    "id": "15201_0",
+    "text": "Based on the provided passages, a caldera is different from a crater in the following ways: 1.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15201_1",
+    "text": "Formation:",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15201_2",
+    "text": "Calderas are formed as a result of the collapse of a large cavity created underground when a chamber of magma and lava empties, while craters are caused by impacts from meteorites.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15201_3",
+    "text": "2.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   },
+   {
+    "id": "15201_4",
+    "text": "Size: Calderas are typically larger than craters, with a diameter of at least 1 kilometer or more, while craters can range in size from very small to several hundred kilometers across.",
+    "ragtruth_label": 1,
+    "label_types": "Subtle Baseless Info"
+   },
+   {
+    "id": "15201_5",
+    "text": "3.",
+    "ragtruth_label": 0,
+    "label_types": "Evident Conflict"
+   },
+   {
+    "id": "15201_6",
+    "text": "Location:",
+    "ragtruth_label": 1,
+    "label_types": "Evident Conflict"
+   },
+   {
+    "id": "15201_7",
+    "text": "Calderas are found at the top of volcanoes, while craters can be found on the surface of other planetary bodies such as the moon or asteroids.",
+    "ragtruth_label": 1,
+    "label_types": "Evident Baseless Info|Evident Conflict"
+   },
+   {
+    "id": "15201_8",
+    "text": "Therefore, based on the given passages, a caldera is different from a crater in terms of its formation, size, and location.",
+    "ragtruth_label": 0,
+    "label_types": ""
+   }
+  ]
+ }
+]

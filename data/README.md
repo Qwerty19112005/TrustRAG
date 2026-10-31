@@ -1,6 +1,6 @@
 # TrustRAG datasets
 
-Downloaded and verified by `scripts/download_data.py`.
+Downloaded and verified by `scripts/setup/download_data.py`.
 Total on disk: 57.5 MB. Re-run that script anywhere (including Colab) to rebuild this folder.
 
 ```
@@ -96,7 +96,7 @@ perfectly balanced and a random detector scores exactly 0.50 AUROC. 10,000 rows 
 
 Six other configs exist upstream and were not downloaded: `dialogue`,
 `dialogue_samples`, `general`, `qa_samples`, `summarization`,
-`summarization_samples`. Add them to `WANT` in `download_data.py` if needed.
+`summarization_samples`. Add them to `WANT` in `scripts/setup/download_data.py` if needed.
 
 ## 3. HotpotQA (`hotpotqa/hotpot_qa`, config `distractor`, split `validation`)
 

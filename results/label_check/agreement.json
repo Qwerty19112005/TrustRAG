@@ -1,0 +1,356 @@
+{
+  "sample": {
+    "answers": 14,
+    "sentences": 108,
+    "llm_unsupported": 37,
+    "ragtruth_unsupported": 40
+  },
+  "pairs": [
+    {
+      "a": "llm",
+      "b": "ragtruth",
+      "n": 108,
+      "agreement": 0.75,
+      "kappa": 0.45556385362210605,
+      "kappa_ci": [
+        0.2287495115552082,
+        0.6544983139044739
+      ]
+    }
+  ],
+  "ragtruth_against_baseline": {
+    "both_unsupported": 25,
+    "only_ragtruth": 15,
+    "only_baseline": 12,
+    "precision": 0.625,
+    "recall": 0.6756756756756757
+  },
+  "detector": [
+    {
+      "labels": "llm",
+      "method": "Word overlap",
+      "auroc": 0.5506280928816141,
+      "auprc": 0.3503779489018145,
+      "base_rate": 0.3425925925925926,
+      "auroc_ci": [
+        0.4299544534412955,
+        0.6601617099919752
+      ]
+    },
+    {
+      "labels": "llm",
+      "method": "NLI, best sentence",
+      "auroc": 0.7156452226874762,
+      "auprc": 0.4988352064028295,
+      "base_rate": 0.3425925925925926,
+      "auroc_ci": [
+        0.5967627334465195,
+        0.8193051670425302
+      ]
+    },
+    {
+      "labels": "llm",
+      "method": "TrustRAG v1 (6 features)",
+      "auroc": 0.6977540921202894,
+      "auprc": 0.46767867832615495,
+      "base_rate": 0.3425925925925926,
+      "auroc_ci": [
+        0.5873801481004871,
+        0.796911467015956
+      ]
+    },
+    {
+      "labels": "llm",
+      "method": "TrustRAG v2 (12 features)",
+      "auroc": 0.7228778073848496,
+      "auprc": 0.5294302566001464,
+      "base_rate": 0.3425925925925926,
+      "auroc_ci": [
+        0.6090527551381998,
+        0.8186224894291754
+      ]
+    },
+    {
+      "labels": "llm",
+      "method": "TrustRAG v2, boosted trees",
+      "auroc": 0.794061667301104,
+      "auprc": 0.6701165682959163,
+      "base_rate": 0.3425925925925926,
+      "auroc_ci": [
+        0.6755331737902162,
+        0.8844402934680712
+      ]
+    },
+    {
+      "labels": "ragtruth",
+      "method": "Word overlap",
+      "auroc": 0.5608455882352942,
+      "auprc": 0.398708416686594,
+      "base_rate": 0.37037037037037035,
+      "auroc_ci": [
+        0.4447590702947846,
+        0.6795084800088061
+      ]
+    },
+    {
+      "labels": "ragtruth",
+      "method": "NLI, best sentence",
+      "auroc": 0.5992647058823529,
+      "auprc": 0.43884264457132466,
+      "base_rate": 0.37037037037037035,
+      "auroc_ci": [
+        0.4473097375875154,
+        0.7227099542268303
+      ]
+    },
+    {
+      "labels": "ragtruth",
+      "method": "TrustRAG v1 (6 features)",
+      "auroc": 0.5691176470588235,
+      "auprc": 0.4124108812344718,
+      "base_rate": 0.37037037037037035,
+      "auroc_ci": [
+        0.3995820129107982,
+        0.705962612436812
+      ]
+    },
+    {
+      "labels": "ragtruth",
+      "method": "TrustRAG v2 (12 features)",
+      "auroc": 0.6268382352941176,
+      "auprc": 0.5018582221925542,
+      "base_rate": 0.37037037037037035,
+      "auroc_ci": [
+        0.4767153134916293,
+        0.7473146940227705
+      ]
+    },
+    {
+      "labels": "ragtruth",
+      "method": "TrustRAG v2, boosted trees",
+      "auroc": 0.7238970588235295,
+      "auprc": 0.6566869848271317,
+      "base_rate": 0.37037037037037035,
+      "auroc_ci": [
+        0.5603500431272989,
+        0.8373391801288144
+      ]
+    }
+  ],
+  "trees_gap": {
+    "auroc_llm_minus_ragtruth": 0.0728024875261734,
+    "ci": [
+      -0.05427784805174865,
+      0.22585612179242182
+    ]
+  },
+  "actions": {
+    "show": {
+      "sentences": 69,
+      "llm_unsupported": 16,
+      "ragtruth_unsupported": 21
+    },
+    "flag": {
+      "sentences": 39,
+      "llm_unsupported": 21,
+      "ragtruth_unsupported": 19
+    },
+    "hold": {
+      "sentences": 0,
+      "llm_unsupported": 0,
+      "ragtruth_unsupported": 0
+    }
+  },
+  "judge_sentences_on_sample": 18,
+  "disagreements": [
+    {
+      "claim_id": "16420_0",
+      "text": "Based on the given passages, here are the steps to draw a truncated cone in GeoGebra: 1.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "16420_1",
+      "text": "Draw a circle with a diameter of 2 inches as the base of the truncated cone.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "16420_6",
+      "text": "This will create the truncated top of the cone.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "16420_8",
+      "text": "Here's an example of how the truncated cone might look in GeoGebra: Note that the exact dimensions of the cone can be adjusted based on the measurements provided in the passages.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "13156_4",
+      "text": "3. Enhances empathy and listening skills: Physical touch, such as hugging, can increase empathy and improve listening skills, leading to better relationships and emotional intimacy (Passage 2).",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "13156_5",
+      "text": "4. Soothes existential fears: Hugging can help alleviate fears of mortality and provide a sense of comfort and security (Passage 3).",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "15905_4",
+      "text": "The base is connected to a voltage source, and the collector and emitter are connected to the input and output circuits, respectively.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "12297_4",
+      "text": "Burn the flag in a proper ceremony.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Conflict"
+    },
+    {
+      "claim_id": "12297_5",
+      "text": "If you are able to personally discharge your worn flag from service, the ceremony that follows is the proper way.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Conflict"
+    },
+    {
+      "claim_id": "12297_6",
+      "text": "The flag must be folded in the customary triangle fold.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Conflict"
+    },
+    {
+      "claim_id": "12297_7",
+      "text": "(Passage 2)",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Conflict"
+    },
+    {
+      "claim_id": "15465_7",
+      "text": "Alternatively, you can call the USPS Customer Service number at 1-800-ASK-USPS (1-800-275-8777) or visit any U.S. Post Office to fill out and submit PS Form 3575, which is available for download from the USPS website.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "14860_3",
+      "text": "However, it's important to note that breeding is not a guaranteed process, and you may need to try multiple times to successfully breed the Shugabeats.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "14860_4",
+      "text": "Additionally, it's worth mentioning that the Shugabeats is a Generation 2 monster, so you will need to have both a Generation 1 monster and another monster of any level to create it.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "14860_6",
+      "text": "Finally, it's important to note that the breeding process can be affected by the elements of the monsters being bred.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "12335_5",
+      "text": "He seems uncomfortable or suggests that you not continue flirting with him (Passage 1) If you observe these behaviors from a male coworker, it may be a sign that he is interested in you and flirting with you.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "12335_6",
+      "text": "However, it's essential to remember that these signs alone do not necessarily mean the person likes you romantically, and it's possible they just have a friendly interest in you.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "12335_7",
+      "text": "To confirm their intentions, consider observing their behavior over time, and if you feel comfortable, try initiating a conversation or asking them out.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "14764_2",
+      "text": "Therefore, the normal range for BNP is likely the range below which the likelihood of heart failure decreases.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "14764_4",
+      "text": "Given this context, it can be inferred that a normal BNP level would be within the range that is typical for a healthy individual and does not indicate heart failure.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "14764_5",
+      "text": "Therefore, answering the question based on the given passages, a normal BNP level is: Within the normal range typical for a healthy individual, and does not indicate heart failure.",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Baseless Info"
+    },
+    {
+      "claim_id": "14470_1",
+      "text": "Answer: The Reconstruction period after the Civil War brought significant political changes to the United States.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "14470_5",
+      "text": "Answer: The Reconstruction period after the Civil War brought economic unity to the United States, as the South joined the market system and abandoned their former semi-subsistence economy.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "14470_7",
+      "text": "Answer: The passage does not provide information about specific social effects on the United States.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "14211_0",
+      "text": "Based on the provided passages, the cause of watermelons to explode is not explicitly stated.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    },
+    {
+      "claim_id": "15201_6",
+      "text": "Location:",
+      "ragtruth": 1,
+      "llm": 0,
+      "ragtruth_types": "Evident Conflict"
+    },
+    {
+      "claim_id": "15201_8",
+      "text": "Therefore, based on the given passages, a caldera is different from a crater in terms of its formation, size, and location.",
+      "ragtruth": 0,
+      "llm": 1,
+      "ragtruth_types": ""
+    }
+  ]
+}

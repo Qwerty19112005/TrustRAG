@@ -1,4 +1,4 @@
-"""The six features: three from NLI, one from embeddings, two from the claim text."""
+"""NLI and embedding scoring, and the first six features."""
 
 import os
 
@@ -9,9 +9,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "data", "cache")
 
 NLI_MODEL = "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli"
+NLI_MODEL_BASE = "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"     # the 0.18B verifier
 EMB_MODEL = "BAAI/bge-small-en-v1.5"
 FEATURE_NAMES = ["f1_support", "f2_peak_contra", "f3_mean_top3_ent",
                  "f4_max_cosine", "f5_specificity", "f6_claim_len"]
+
+# evidence sentences per passage; run_experiment.py raises this to 60 for news articles
+MAX_SENTENCES = 20
 
 _state = {}
 
@@ -27,7 +31,7 @@ def _nli():
         m = AutoModelForSequenceClassification.from_pretrained(NLI_MODEL).to(_device()).eval()
         if _device() == "cuda":
             m = m.half()
-        # reorder to [entail, neutral, contra]; the config order is not guaranteed
+        # columns in the order entail, neutral, contra
         lab = {v.lower(): k for k, v in m.config.id2label.items()}
         _state["nli"] = (tok, m, [lab["entailment"], lab["neutral"], lab["contradiction"]])
     return _state["nli"]
@@ -49,28 +53,32 @@ def _spacy():
     return _state["nlp"]
 
 
-def split_sentences(text, max_chars=9000, min_len=20, cap=20):
+def split_sentences(text, max_chars=9000, min_len=20, cap=None):
+    cap = cap or MAX_SENTENCES
     doc = _spacy()(text[:max_chars])
     out = [" ".join(s.text.split()) for s in doc.sents if len(s.text.strip()) >= min_len]
     return out[:cap] if out else [" ".join(text[:400].split())]
 
 
 def nli_scores(pairs, batch_size=64, max_length=256):
-    """[(premise, hypothesis)] -> array [n, 3] of P(entail), P(neutral), P(contra)."""
+    """Takes (premise, hypothesis) pairs, returns P(entail), P(neutral), P(contra) for each."""
     tok, model, order = _nli()
-    out = []
+    # batch similar lengths so short pairs are not padded to the longest
+    by_len = np.argsort([len(p) + len(h) for p, h in pairs], kind="stable")
+    out = np.zeros((len(pairs), 3), dtype=np.float32)
     with torch.no_grad():
         for i in range(0, len(pairs), batch_size):
-            ch = pairs[i:i + batch_size]
+            idx = by_len[i:i + batch_size]
+            ch = [pairs[j] for j in idx]
             x = tok([p for p, _ in ch], [h for _, h in ch], return_tensors="pt",
                     padding=True, truncation=True, max_length=max_length).to(_device())
             p = torch.softmax(model(**x).logits.float(), -1).cpu().numpy()
-            out.append(p[:, order])
-    return np.vstack(out) if out else np.zeros((0, 3))
+            out[idx] = p[:, order]
+    return out
 
 
 def embed(texts, batch_size=64, max_length=256):
-    """CLS pooling then L2 normalise, so a dot product gives cosine similarity."""
+    """Normalised CLS vectors, so a dot product is a cosine."""
     tok, model = _emb()
     vecs = []
     with torch.no_grad():
@@ -83,7 +91,7 @@ def embed(texts, batch_size=64, max_length=256):
 
 
 def extract(df, verbose=True):
-    """df needs columns: claim, context, label. Returns X [n,6], y [n]."""
+    """df needs claim, context and label. Returns the six features and the labels."""
     contexts = list(dict.fromkeys(df["context"].tolist()))
     sents = {c: split_sentences(c) for c in contexts}
     if verbose:
@@ -97,7 +105,7 @@ def extract(df, verbose=True):
 
     docs = list(_spacy().pipe(claims, batch_size=64))
 
-    # flatten to one list so the GPU gets full batches; scoring per claim is ~5x slower
+    # one flat list so the GPU gets full batches
     rows = df.reset_index(drop=True)
     pairs, bounds = [], []
     for _, row in rows.iterrows():
